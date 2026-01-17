@@ -16,5 +16,22 @@ namespace Inventory_Management_Sys
         {
             InitializeComponent();
         }
+
+        private void Close_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void Register_Label_Click(object sender, EventArgs e)
+        {
+            Register_Form RegForm = new Register_Form();
+            RegForm.Show();
+            this.Hide();
+        }
+
+        private void Login_ShowPass_CheckedChanged(object sender, EventArgs e)
+        {
+            Login_Password.PasswordChar = Login_ShowPass.Checked ? '\0' : '*' ;
+        }
     }
 }

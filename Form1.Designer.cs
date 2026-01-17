@@ -36,10 +36,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.Loginbtn = new System.Windows.Forms.Button();
+            this.Register_Label = new System.Windows.Forms.Label();
+            this.Login_Username = new System.Windows.Forms.TextBox();
+            this.Login_Password = new System.Windows.Forms.TextBox();
+            this.Login_Btn = new System.Windows.Forms.Button();
+            this.Login_ShowPass = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,15 +56,17 @@
             this.Close.TabIndex = 0;
             this.Close.Text = "X";
             this.Close.UseVisualStyleBackColor = false;
+            this.Close.Click += new System.EventHandler(this.Close_Click);
             // 
             // panel1
             // 
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Controls.Add(this.Loginbtn);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.Login_ShowPass);
+            this.panel1.Controls.Add(this.Login_Btn);
+            this.panel1.Controls.Add(this.Login_Password);
+            this.panel1.Controls.Add(this.Login_Username);
+            this.panel1.Controls.Add(this.Register_Label);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
@@ -115,9 +118,9 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Transparent;
-            this.label4.Location = new System.Drawing.Point(109, 240);
+            this.label4.Location = new System.Drawing.Point(109, 225);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(99, 25);
+            this.label4.Size = new System.Drawing.Size(79, 20);
             this.label4.TabIndex = 4;
             this.label4.Text = "Password";
             // 
@@ -133,45 +136,64 @@
             this.label5.TabIndex = 5;
             this.label5.Text = "Have no account ? >";
             // 
-            // label6
+            // Register_Label
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Cyan;
-            this.label6.Location = new System.Drawing.Point(221, 521);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(139, 25);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "Register here.";
+            this.Register_Label.AutoSize = true;
+            this.Register_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Register_Label.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Register_Label.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Register_Label.ForeColor = System.Drawing.Color.Cyan;
+            this.Register_Label.Location = new System.Drawing.Point(221, 521);
+            this.Register_Label.Name = "Register_Label";
+            this.Register_Label.Size = new System.Drawing.Size(139, 25);
+            this.Register_Label.TabIndex = 6;
+            this.Register_Label.Text = "Register here.";
+            this.Register_Label.Click += new System.EventHandler(this.Register_Label_Click);
             // 
-            // textBox1
+            // Login_Username
             // 
-            this.textBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(113, 175);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(184, 30);
-            this.textBox1.TabIndex = 2;
+            this.Login_Username.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Login_Username.Location = new System.Drawing.Point(113, 175);
+            this.Login_Username.Name = "Login_Username";
+            this.Login_Username.Size = new System.Drawing.Size(184, 30);
+            this.Login_Username.TabIndex = 2;
             // 
-            // textBox2
+            // Login_Password
             // 
-            this.textBox2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(113, 268);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(184, 30);
-            this.textBox2.TabIndex = 7;
+            this.Login_Password.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Login_Password.Location = new System.Drawing.Point(113, 253);
+            this.Login_Password.Name = "Login_Password";
+            this.Login_Password.PasswordChar = '*';
+            this.Login_Password.Size = new System.Drawing.Size(184, 30);
+            this.Login_Password.TabIndex = 7;
             // 
-            // Loginbtn
+            // Login_Btn
             // 
-            this.Loginbtn.BackColor = System.Drawing.Color.Maroon;
-            this.Loginbtn.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Loginbtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.Loginbtn.Location = new System.Drawing.Point(113, 339);
-            this.Loginbtn.Name = "Loginbtn";
-            this.Loginbtn.Size = new System.Drawing.Size(184, 57);
-            this.Loginbtn.TabIndex = 8;
-            this.Loginbtn.Text = "Login";
-            this.Loginbtn.UseVisualStyleBackColor = false;
+            this.Login_Btn.BackColor = System.Drawing.Color.Black;
+            this.Login_Btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Login_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Login_Btn.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Login_Btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.Login_Btn.Location = new System.Drawing.Point(112, 361);
+            this.Login_Btn.Name = "Login_Btn";
+            this.Login_Btn.Size = new System.Drawing.Size(184, 57);
+            this.Login_Btn.TabIndex = 8;
+            this.Login_Btn.Text = "Login";
+            this.Login_Btn.UseVisualStyleBackColor = false;
+            // 
+            // Login_ShowPass
+            // 
+            this.Login_ShowPass.AutoSize = true;
+            this.Login_ShowPass.BackColor = System.Drawing.Color.Transparent;
+            this.Login_ShowPass.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Login_ShowPass.ForeColor = System.Drawing.Color.White;
+            this.Login_ShowPass.Location = new System.Drawing.Point(189, 308);
+            this.Login_ShowPass.Name = "Login_ShowPass";
+            this.Login_ShowPass.Size = new System.Drawing.Size(169, 29);
+            this.Login_ShowPass.TabIndex = 2;
+            this.Login_ShowPass.Text = "show Password";
+            this.Login_ShowPass.UseVisualStyleBackColor = false;
+            this.Login_ShowPass.CheckedChanged += new System.EventHandler(this.Login_ShowPass_CheckedChanged);
             // 
             // Form1
             // 
@@ -203,11 +225,12 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label Register_Label;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button Loginbtn;
+        private System.Windows.Forms.TextBox Login_Password;
+        private System.Windows.Forms.TextBox Login_Username;
+        private System.Windows.Forms.Button Login_Btn;
+        private System.Windows.Forms.CheckBox Login_ShowPass;
     }
 }
 
