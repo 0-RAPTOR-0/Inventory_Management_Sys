@@ -29,7 +29,7 @@ namespace Inventory_Management_Sys
 
         private void Login_Label_Click(object sender, EventArgs e)
         {
-            Form1 LoginForm = new Form1();
+            Login_From LoginForm = new Login_From();
             LoginForm.Show();
             this.Hide();
         }
@@ -94,7 +94,7 @@ namespace Inventory_Management_Sys
                                     MessageBox.Show("Account Created Successfully", "Information Message",
                                         MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                                    Form1 LoginForm = new Form1();
+                                    Login_From LoginForm = new Login_From();
                                     LoginForm.Show();
 
                                     this.Hide();

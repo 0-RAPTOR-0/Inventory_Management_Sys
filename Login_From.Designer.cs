@@ -1,6 +1,6 @@
 ﻿namespace Inventory_Management_Sys
 {
-    partial class Form1
+    partial class Login_From
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login_From));
             this.Close = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.Login_ShowPass = new System.Windows.Forms.CheckBox();
