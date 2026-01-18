@@ -91,7 +91,7 @@ namespace Inventory_Management_Sys
 
                                     insertD.ExecuteNonQuery();
 
-                                    MessageBox.Show("Account Created Successfully", "Success Message",
+                                    MessageBox.Show("Account Created Successfully", "Information Message",
                                         MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                                     Form1 LoginForm = new Form1();

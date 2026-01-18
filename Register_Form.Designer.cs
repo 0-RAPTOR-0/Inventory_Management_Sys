@@ -83,6 +83,7 @@
             this.Register_Xpassword.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Register_Xpassword.Location = new System.Drawing.Point(113, 286);
             this.Register_Xpassword.Name = "Register_Xpassword";
+            this.Register_Xpassword.PasswordChar = '*';
             this.Register_Xpassword.Size = new System.Drawing.Size(184, 30);
             this.Register_Xpassword.TabIndex = 10;
             // 
@@ -118,6 +119,7 @@
             this.Register_Password.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Register_Password.Location = new System.Drawing.Point(113, 204);
             this.Register_Password.Name = "Register_Password";
+            this.Register_Password.PasswordChar = '*';
             this.Register_Password.Size = new System.Drawing.Size(184, 30);
             this.Register_Password.TabIndex = 7;
             // 
