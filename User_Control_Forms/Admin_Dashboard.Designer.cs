@@ -55,7 +55,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.LightGray;
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel5);
@@ -67,7 +67,7 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.Linen;
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.panel4.Controls.Add(this.label8);
             this.panel4.Controls.Add(this.label9);
             this.panel4.Location = new System.Drawing.Point(749, 23);
@@ -97,7 +97,7 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.Linen;
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.label5);
             this.panel3.Location = new System.Drawing.Point(257, 23);
@@ -127,7 +127,7 @@
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.Linen;
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.panel5.Controls.Add(this.label6);
             this.panel5.Controls.Add(this.label7);
             this.panel5.Location = new System.Drawing.Point(504, 23);
@@ -157,7 +157,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.Linen;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(12, 23);
@@ -187,7 +187,7 @@
             // 
             // panel6
             // 
-            this.panel6.BackColor = System.Drawing.Color.LightGray;
+            this.panel6.BackColor = System.Drawing.Color.Transparent;
             this.panel6.Controls.Add(this.label1);
             this.panel6.Controls.Add(this.dataGridView1);
             this.panel6.Location = new System.Drawing.Point(15, 220);
@@ -208,6 +208,7 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(16, 71);
             this.dataGridView1.Name = "dataGridView1";
@@ -220,6 +221,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.DimGray;
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel1);
             this.Name = "Admin_Dashboard";

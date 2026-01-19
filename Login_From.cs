@@ -58,11 +58,11 @@ namespace Inventory_Management_Sys
                 try
                 {
                     connect.Open();
-                    string selectData = "SELECT * FROM Users WHERE UserName = @Users AND Password = @Pass";
+                    string selectData = "SELECT * FROM Users WHERE UserName = @User AND Password = @Pass";
 
                     using (SqlCommand cmd = new SqlCommand(selectData, connect))
                     {
-                        cmd.Parameters.AddWithValue("@Users", Login_Username.Text.Trim());
+                        cmd.Parameters.AddWithValue("@User", Login_Username.Text.Trim());
                         cmd.Parameters.AddWithValue("@Pass", Login_Password.Text.Trim());
 
                         SqlDataAdapter adapter = new SqlDataAdapter(cmd);

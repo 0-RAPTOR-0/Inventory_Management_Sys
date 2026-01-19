@@ -49,11 +49,11 @@ namespace Inventory_Management_Sys
                     {
                         connect.Open();
 
-                        string CheckUserName = "SELECT * FROM Users WHERE UserName = @Users";
+                        string CheckUserName = "SELECT * FROM Users WHERE UserName = @User";
 
                         using (SqlCommand cmd = new SqlCommand(CheckUserName, connect))
                         {
-                            cmd.Parameters.AddWithValue("@Users", Register_Username.Text.Trim());
+                            cmd.Parameters.AddWithValue("@User", Register_Username.Text.Trim());
 
                             SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                             DataTable table = new DataTable();
@@ -76,18 +76,18 @@ namespace Inventory_Management_Sys
                             }
                             else
                             {
-                                string insertData = "INSERT INTO Users (UserName, Password, Role, Status, date)" +
-                                " VALUES (@Users, @Pass, @Role, @Status, @date)";
+                                string insertData = "INSERT INTO Users (UserName, Password, Role, Status, Date)" +
+                                " VALUES (@User, @Pass, @Role, @Status, @Date)";
 
                                 using (SqlCommand insertD = new SqlCommand(insertData, connect))
                                 {
-                                    insertD.Parameters.AddWithValue("@Users", Register_Username.Text.Trim());
+                                    insertD.Parameters.AddWithValue("@User", Register_Username.Text.Trim());
                                     insertD.Parameters.AddWithValue("@Pass", Register_Password.Text.Trim());
                                     insertD.Parameters.AddWithValue("@Role", "Cashier");
                                     insertD.Parameters.AddWithValue("@Status", "Approval");
 
                                     DateTime today = DateTime.Today;
-                                    insertD.Parameters.AddWithValue("@date", today);
+                                    insertD.Parameters.AddWithValue("@Date", today);
 
                                     insertD.ExecuteNonQuery();
 

@@ -43,7 +43,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.admin_Dashboard1 = new Inventory_Management_Sys.User_Control_Forms.Admin_Dashboard();
+            this.admin_Add_Users1 = new Inventory_Management_Sys.User_Control_Forms.Admin_Add_Users();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -58,7 +58,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1309, 50);
+            this.panel1.Size = new System.Drawing.Size(1317, 50);
             this.panel1.TabIndex = 0;
             // 
             // label1
@@ -79,7 +79,7 @@
             this.Close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Close.Font = new System.Drawing.Font("Times New Roman", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Close.ForeColor = System.Drawing.Color.White;
-            this.Close.Location = new System.Drawing.Point(1216, 12);
+            this.Close.Location = new System.Drawing.Point(1238, 8);
             this.Close.Name = "Close";
             this.Close.Size = new System.Drawing.Size(67, 31);
             this.Close.TabIndex = 1;
@@ -102,7 +102,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 50);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(307, 898);
+            this.panel2.Size = new System.Drawing.Size(307, 895);
             this.panel2.TabIndex = 1;
             // 
             // Logout_Btn
@@ -238,24 +238,25 @@
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Controls.Add(this.admin_Dashboard1);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(313, 68);
+            this.flowLayoutPanel1.Controls.Add(this.admin_Add_Users1);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(307, 50);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(996, 874);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1010, 895);
             this.flowLayoutPanel1.TabIndex = 2;
             // 
-            // admin_Dashboard1
+            // admin_Add_Users1
             // 
-            this.admin_Dashboard1.Location = new System.Drawing.Point(3, 3);
-            this.admin_Dashboard1.Name = "admin_Dashboard1";
-            this.admin_Dashboard1.Size = new System.Drawing.Size(967, 866);
-            this.admin_Dashboard1.TabIndex = 0;
+            this.admin_Add_Users1.Location = new System.Drawing.Point(3, 3);
+            this.admin_Add_Users1.Name = "admin_Add_Users1";
+            this.admin_Add_Users1.Size = new System.Drawing.Size(996, 826);
+            this.admin_Add_Users1.TabIndex = 2;
             // 
             // Main_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1309, 948);
+            this.ClientSize = new System.Drawing.Size(1317, 945);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -289,6 +290,6 @@
         private System.Windows.Forms.Button Logout_Btn;
         private System.Windows.Forms.Button Close;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private User_Control_Forms.Admin_Dashboard admin_Dashboard1;
+        private User_Control_Forms.Admin_Add_Users admin_Add_Users1;
     }
 }
