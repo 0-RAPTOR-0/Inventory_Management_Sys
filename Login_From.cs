@@ -72,7 +72,12 @@ namespace Inventory_Management_Sys
                         if (table.Rows.Count > 0)
                         {
                             MessageBox.Show("Login Successful", "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        
+
+                            Main_Form M_from = new Main_Form ();
+                            M_from.Show();
+
+                            this.Hide();
+
                         }
                         else
                         {
@@ -91,6 +96,11 @@ namespace Inventory_Management_Sys
                   connect.Close();
                 }
             }
+        }
+
+        private void Login_From_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

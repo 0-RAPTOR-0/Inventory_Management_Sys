@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Register_Form));
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Register_ShowPass = new System.Windows.Forms.CheckBox();
             this.Register_Xpassword = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.Loginbtn = new System.Windows.Forms.Button();
@@ -42,7 +43,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.Close = new System.Windows.Forms.Button();
-            this.Register_ShowPass = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -77,6 +77,20 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(417, 582);
             this.panel1.TabIndex = 4;
+            // 
+            // Register_ShowPass
+            // 
+            this.Register_ShowPass.AutoSize = true;
+            this.Register_ShowPass.BackColor = System.Drawing.Color.Transparent;
+            this.Register_ShowPass.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Register_ShowPass.ForeColor = System.Drawing.Color.White;
+            this.Register_ShowPass.Location = new System.Drawing.Point(160, 322);
+            this.Register_ShowPass.Name = "Register_ShowPass";
+            this.Register_ShowPass.Size = new System.Drawing.Size(137, 23);
+            this.Register_ShowPass.TabIndex = 11;
+            this.Register_ShowPass.Text = "Show Password";
+            this.Register_ShowPass.UseVisualStyleBackColor = false;
+            this.Register_ShowPass.CheckedChanged += new System.EventHandler(this.Register_ShowPass_CheckedChanged);
             // 
             // Register_Xpassword
             // 
@@ -207,20 +221,6 @@
             this.Close.UseVisualStyleBackColor = false;
             this.Close.Click += new System.EventHandler(this.Close_Click);
             // 
-            // Register_ShowPass
-            // 
-            this.Register_ShowPass.AutoSize = true;
-            this.Register_ShowPass.BackColor = System.Drawing.Color.Transparent;
-            this.Register_ShowPass.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Register_ShowPass.ForeColor = System.Drawing.Color.White;
-            this.Register_ShowPass.Location = new System.Drawing.Point(160, 322);
-            this.Register_ShowPass.Name = "Register_ShowPass";
-            this.Register_ShowPass.Size = new System.Drawing.Size(137, 23);
-            this.Register_ShowPass.TabIndex = 11;
-            this.Register_ShowPass.Text = "Show Password";
-            this.Register_ShowPass.UseVisualStyleBackColor = false;
-            this.Register_ShowPass.CheckedChanged += new System.EventHandler(this.Register_ShowPass_CheckedChanged);
-            // 
             // Register_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -235,6 +235,7 @@
             this.Name = "Register_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Register_Form";
+            this.Load += new System.EventHandler(this.Register_Form_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

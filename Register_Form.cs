@@ -137,5 +137,10 @@ namespace Inventory_Management_Sys
             Register_Password.PasswordChar = Register_ShowPass.Checked ? '\0' : '*';
             Register_Xpassword.PasswordChar = Register_ShowPass.Checked ? '\0' : '*';
         }
+
+        private void Register_Form_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
