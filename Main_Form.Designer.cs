@@ -36,7 +36,7 @@
             this.Logout_Btn = new System.Windows.Forms.Button();
             this.Customers_Btn = new System.Windows.Forms.Button();
             this.Addproduct_Btn = new System.Windows.Forms.Button();
-            this.Addcatagories_Btn = new System.Windows.Forms.Button();
+            this.Addcategories_Btn = new System.Windows.Forms.Button();
             this.Addusers_Btn = new System.Windows.Forms.Button();
             this.Dashboard_Btn = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -93,7 +93,7 @@
             this.panel2.Controls.Add(this.Logout_Btn);
             this.panel2.Controls.Add(this.Customers_Btn);
             this.panel2.Controls.Add(this.Addproduct_Btn);
-            this.panel2.Controls.Add(this.Addcatagories_Btn);
+            this.panel2.Controls.Add(this.Addcategories_Btn);
             this.panel2.Controls.Add(this.Addusers_Btn);
             this.panel2.Controls.Add(this.Dashboard_Btn);
             this.panel2.Controls.Add(this.label3);
@@ -154,21 +154,21 @@
             this.Addproduct_Btn.Text = "Add Products";
             this.Addproduct_Btn.UseVisualStyleBackColor = false;
             // 
-            // Addcatagories_Btn
+            // Addcategories_Btn
             // 
-            this.Addcatagories_Btn.BackColor = System.Drawing.Color.Transparent;
-            this.Addcatagories_Btn.FlatAppearance.BorderSize = 0;
-            this.Addcatagories_Btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.Addcatagories_Btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.Addcatagories_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Addcatagories_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Addcatagories_Btn.ForeColor = System.Drawing.Color.Black;
-            this.Addcatagories_Btn.Location = new System.Drawing.Point(35, 348);
-            this.Addcatagories_Btn.Name = "Addcatagories_Btn";
-            this.Addcatagories_Btn.Size = new System.Drawing.Size(231, 49);
-            this.Addcatagories_Btn.TabIndex = 5;
-            this.Addcatagories_Btn.Text = "Add Catagories";
-            this.Addcatagories_Btn.UseVisualStyleBackColor = false;
+            this.Addcategories_Btn.BackColor = System.Drawing.Color.Transparent;
+            this.Addcategories_Btn.FlatAppearance.BorderSize = 0;
+            this.Addcategories_Btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.Addcategories_Btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.Addcategories_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Addcategories_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Addcategories_Btn.ForeColor = System.Drawing.Color.Black;
+            this.Addcategories_Btn.Location = new System.Drawing.Point(35, 348);
+            this.Addcategories_Btn.Name = "Addcategories_Btn";
+            this.Addcategories_Btn.Size = new System.Drawing.Size(231, 49);
+            this.Addcategories_Btn.TabIndex = 5;
+            this.Addcategories_Btn.Text = "Add Categories";
+            this.Addcategories_Btn.UseVisualStyleBackColor = false;
             // 
             // Addusers_Btn
             // 
@@ -283,7 +283,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button Addproduct_Btn;
-        private System.Windows.Forms.Button Addcatagories_Btn;
+        private System.Windows.Forms.Button Addcategories_Btn;
         private System.Windows.Forms.Button Addusers_Btn;
         private System.Windows.Forms.Button Dashboard_Btn;
         private System.Windows.Forms.Button Customers_Btn;
