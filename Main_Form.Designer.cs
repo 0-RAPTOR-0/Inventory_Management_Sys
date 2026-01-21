@@ -41,18 +41,15 @@
             this.Dashboard_Btn = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.admin_Add_Users2 = new Inventory_Management_Sys.User_Control_Forms.Admin_Add_Users();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.Close);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -66,7 +63,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.ForeColor = System.Drawing.Color.Lime;
             this.label1.Location = new System.Drawing.Point(31, 16);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(226, 23);
@@ -75,7 +72,9 @@
             // 
             // Close
             // 
-            this.Close.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.Close.BackColor = System.Drawing.Color.Transparent;
+            this.Close.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.Close.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.Close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Close.Font = new System.Drawing.Font("Times New Roman", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Close.ForeColor = System.Drawing.Color.White;
@@ -89,7 +88,9 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.DimGray;
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel2.Controls.Add(this.Logout_Btn);
             this.panel2.Controls.Add(this.Customers_Btn);
             this.panel2.Controls.Add(this.Addproduct_Btn);
@@ -98,7 +99,6 @@
             this.panel2.Controls.Add(this.Dashboard_Btn);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 50);
             this.panel2.Name = "panel2";
@@ -129,8 +129,8 @@
             this.Customers_Btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.Customers_Btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.Customers_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Customers_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Customers_Btn.ForeColor = System.Drawing.Color.Black;
+            this.Customers_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Customers_Btn.ForeColor = System.Drawing.Color.MediumSpringGreen;
             this.Customers_Btn.Location = new System.Drawing.Point(35, 491);
             this.Customers_Btn.Name = "Customers_Btn";
             this.Customers_Btn.Size = new System.Drawing.Size(231, 49);
@@ -145,8 +145,8 @@
             this.Addproduct_Btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.Addproduct_Btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.Addproduct_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Addproduct_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Addproduct_Btn.ForeColor = System.Drawing.Color.Black;
+            this.Addproduct_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Addproduct_Btn.ForeColor = System.Drawing.Color.MediumSpringGreen;
             this.Addproduct_Btn.Location = new System.Drawing.Point(35, 420);
             this.Addproduct_Btn.Name = "Addproduct_Btn";
             this.Addproduct_Btn.Size = new System.Drawing.Size(231, 49);
@@ -161,8 +161,8 @@
             this.Addcategories_Btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.Addcategories_Btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.Addcategories_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Addcategories_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Addcategories_Btn.ForeColor = System.Drawing.Color.Black;
+            this.Addcategories_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Addcategories_Btn.ForeColor = System.Drawing.Color.MediumSpringGreen;
             this.Addcategories_Btn.Location = new System.Drawing.Point(35, 348);
             this.Addcategories_Btn.Name = "Addcategories_Btn";
             this.Addcategories_Btn.Size = new System.Drawing.Size(231, 49);
@@ -177,8 +177,8 @@
             this.Addusers_Btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.Addusers_Btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.Addusers_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Addusers_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Addusers_Btn.ForeColor = System.Drawing.Color.Black;
+            this.Addusers_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Addusers_Btn.ForeColor = System.Drawing.Color.MediumSpringGreen;
             this.Addusers_Btn.Location = new System.Drawing.Point(35, 275);
             this.Addusers_Btn.Name = "Addusers_Btn";
             this.Addusers_Btn.Size = new System.Drawing.Size(231, 49);
@@ -193,8 +193,8 @@
             this.Dashboard_Btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.Dashboard_Btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.Dashboard_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Dashboard_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Dashboard_Btn.ForeColor = System.Drawing.Color.Black;
+            this.Dashboard_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Dashboard_Btn.ForeColor = System.Drawing.Color.MediumSpringGreen;
             this.Dashboard_Btn.Location = new System.Drawing.Point(35, 204);
             this.Dashboard_Btn.Name = "Dashboard_Btn";
             this.Dashboard_Btn.Size = new System.Drawing.Size(231, 49);
@@ -206,11 +206,11 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(163, 111);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 22);
+            this.label3.Size = new System.Drawing.Size(101, 36);
             this.label3.TabIndex = 3;
             this.label3.Text = "Admin";
             // 
@@ -218,39 +218,23 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(63, 111);
+            this.label2.Location = new System.Drawing.Point(45, 111);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 22);
+            this.label2.Size = new System.Drawing.Size(121, 29);
             this.label2.TabIndex = 2;
             this.label2.Text = "Welcome,";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 15);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(280, 93);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Controls.Add(this.admin_Add_Users2);
+            this.flowLayoutPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("flowLayoutPanel1.BackgroundImage")));
+            this.flowLayoutPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(307, 50);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1010, 895);
             this.flowLayoutPanel1.TabIndex = 2;
-            // 
-            // admin_Add_Users2
-            // 
-            this.admin_Add_Users2.Location = new System.Drawing.Point(3, 3);
-            this.admin_Add_Users2.Name = "admin_Add_Users2";
-            this.admin_Add_Users2.Size = new System.Drawing.Size(1007, 892);
-            this.admin_Add_Users2.TabIndex = 0;
             // 
             // Main_Form
             // 
@@ -268,8 +252,6 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -279,7 +261,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button Addproduct_Btn;
@@ -291,6 +272,5 @@
         private System.Windows.Forms.Button Close;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private User_Control_Forms.Admin_Add_Users admin_Add_Users1;
-        private User_Control_Forms.Admin_Add_Users admin_Add_Users2;
     }
 }

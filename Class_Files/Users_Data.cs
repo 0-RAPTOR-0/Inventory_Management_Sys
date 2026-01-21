@@ -16,8 +16,7 @@ namespace Inventory_Management_Sys.Class_Files
         public string Password { set; get; }
         public string Role { set; get; }
         public string Status { set; get; }
-
-        private string Date {  set; get; }
+        public string Date { set; get; }
 
         public List<Users_Data> All_Users_Data()
         {

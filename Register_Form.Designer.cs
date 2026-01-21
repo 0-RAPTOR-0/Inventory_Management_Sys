@@ -60,7 +60,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Controls.Add(this.Register_ShowPass);
             this.panel1.Controls.Add(this.Register_Xpassword);
@@ -105,21 +105,23 @@
             // 
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Transparent;
             this.label7.Location = new System.Drawing.Point(109, 258);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(79, 20);
+            this.label7.Size = new System.Drawing.Size(128, 33);
             this.label7.TabIndex = 9;
             this.label7.Text = "Password";
             // 
             // Loginbtn
             // 
-            this.Loginbtn.BackColor = System.Drawing.Color.Black;
+            this.Loginbtn.BackColor = System.Drawing.Color.Transparent;
             this.Loginbtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Loginbtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.Loginbtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.Loginbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Loginbtn.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Loginbtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.Loginbtn.ForeColor = System.Drawing.Color.White;
             this.Loginbtn.Location = new System.Drawing.Point(113, 371);
             this.Loginbtn.Name = "Loginbtn";
             this.Loginbtn.Size = new System.Drawing.Size(184, 57);
@@ -151,7 +153,7 @@
             this.Login_Label.BackColor = System.Drawing.Color.Transparent;
             this.Login_Label.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Login_Label.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Login_Label.ForeColor = System.Drawing.Color.Cyan;
+            this.Login_Label.ForeColor = System.Drawing.Color.Aqua;
             this.Login_Label.Location = new System.Drawing.Point(248, 521);
             this.Login_Label.Name = "Login_Label";
             this.Login_Label.Size = new System.Drawing.Size(103, 20);
@@ -175,11 +177,11 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Transparent;
             this.label4.Location = new System.Drawing.Point(109, 176);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(79, 20);
+            this.label4.Size = new System.Drawing.Size(128, 33);
             this.label4.TabIndex = 4;
             this.label4.Text = "Password";
             // 
@@ -187,20 +189,20 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Transparent;
             this.label3.Location = new System.Drawing.Point(109, 102);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(86, 20);
+            this.label3.Size = new System.Drawing.Size(139, 33);
             this.label3.TabIndex = 3;
             this.label3.Text = "UserName";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.LightGray;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.ForeColor = System.Drawing.Color.Lime;
             this.label2.Location = new System.Drawing.Point(96, 40);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(218, 32);
@@ -209,7 +211,9 @@
             // 
             // Close
             // 
-            this.Close.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.Close.BackColor = System.Drawing.Color.Transparent;
+            this.Close.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.Close.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.Close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Close.Font = new System.Drawing.Font("Times New Roman", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Close.ForeColor = System.Drawing.Color.White;

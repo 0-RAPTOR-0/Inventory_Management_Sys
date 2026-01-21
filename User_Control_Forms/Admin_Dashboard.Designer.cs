@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin_Dashboard));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
@@ -67,7 +68,7 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.panel4.Controls.Add(this.label8);
             this.panel4.Controls.Add(this.label9);
             this.panel4.Location = new System.Drawing.Point(729, 23);
@@ -222,10 +223,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel1);
             this.Name = "Admin_Dashboard";
-            this.Size = new System.Drawing.Size(965, 866);
+            this.Size = new System.Drawing.Size(968, 858);
             this.Load += new System.EventHandler(this.Admin_Dashboard_Load);
             this.panel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
