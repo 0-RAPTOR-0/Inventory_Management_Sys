@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Add_User_Data_Grid_V = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
             this.Adduser_Clear_Btn = new System.Windows.Forms.Button();
             this.Adduser_Remove_Btn = new System.Windows.Forms.Button();
@@ -46,42 +46,43 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Add_User_Data_Grid_V)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.dataGridView1);
+            this.panel2.Controls.Add(this.Add_User_Data_Grid_V);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Location = new System.Drawing.Point(382, 49);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(582, 803);
+            this.panel2.Size = new System.Drawing.Size(590, 803);
             this.panel2.TabIndex = 3;
             // 
-            // dataGridView1
+            // Add_User_Data_Grid_V
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DarkGray;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 58);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(576, 697);
-            this.dataGridView1.TabIndex = 15;
+            this.Add_User_Data_Grid_V.AllowUserToAddRows = false;
+            this.Add_User_Data_Grid_V.AllowUserToDeleteRows = false;
+            this.Add_User_Data_Grid_V.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.Add_User_Data_Grid_V.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DarkGray;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Add_User_Data_Grid_V.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.Add_User_Data_Grid_V.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Add_User_Data_Grid_V.Location = new System.Drawing.Point(3, 58);
+            this.Add_User_Data_Grid_V.Name = "Add_User_Data_Grid_V";
+            this.Add_User_Data_Grid_V.ReadOnly = true;
+            this.Add_User_Data_Grid_V.RowHeadersVisible = false;
+            this.Add_User_Data_Grid_V.RowHeadersWidth = 51;
+            this.Add_User_Data_Grid_V.RowTemplate.Height = 24;
+            this.Add_User_Data_Grid_V.Size = new System.Drawing.Size(581, 697);
+            this.Add_User_Data_Grid_V.TabIndex = 15;
+            this.Add_User_Data_Grid_V.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Add_User_Data_Grid_V_CellClick);
             // 
             // label5
             // 
@@ -107,6 +108,7 @@
             this.Adduser_Clear_Btn.TabIndex = 13;
             this.Adduser_Clear_Btn.Text = "Clear";
             this.Adduser_Clear_Btn.UseVisualStyleBackColor = false;
+            this.Adduser_Clear_Btn.Click += new System.EventHandler(this.Adduser_Clear_Btn_Click);
             // 
             // Adduser_Remove_Btn
             // 
@@ -121,6 +123,7 @@
             this.Adduser_Remove_Btn.TabIndex = 12;
             this.Adduser_Remove_Btn.Text = "Remove";
             this.Adduser_Remove_Btn.UseVisualStyleBackColor = false;
+            this.Adduser_Remove_Btn.Click += new System.EventHandler(this.Adduser_Remove_Btn_Click);
             // 
             // Adduser_Update_Btn
             // 
@@ -135,6 +138,7 @@
             this.Adduser_Update_Btn.TabIndex = 11;
             this.Adduser_Update_Btn.Text = "Update";
             this.Adduser_Update_Btn.UseVisualStyleBackColor = false;
+            this.Adduser_Update_Btn.Click += new System.EventHandler(this.Adduser_Update_Btn_Click);
             // 
             // Adduser_Add_Btn
             // 
@@ -259,10 +263,10 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "Admin_Add_Users";
-            this.Size = new System.Drawing.Size(967, 866);
+            this.Size = new System.Drawing.Size(977, 856);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Add_User_Data_Grid_V)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -272,7 +276,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView Add_User_Data_Grid_V;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button Adduser_Clear_Btn;
         private System.Windows.Forms.Button Adduser_Remove_Btn;

@@ -60,9 +60,9 @@
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Location = new System.Drawing.Point(3, 17);
+            this.panel1.Location = new System.Drawing.Point(15, 17);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(961, 184);
+            this.panel1.Size = new System.Drawing.Size(935, 184);
             this.panel1.TabIndex = 0;
             // 
             // panel4
@@ -70,7 +70,7 @@
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.panel4.Controls.Add(this.label8);
             this.panel4.Controls.Add(this.label9);
-            this.panel4.Location = new System.Drawing.Point(749, 23);
+            this.panel4.Location = new System.Drawing.Point(729, 23);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(200, 138);
             this.panel4.TabIndex = 3;
@@ -100,7 +100,7 @@
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.label5);
-            this.panel3.Location = new System.Drawing.Point(257, 23);
+            this.panel3.Location = new System.Drawing.Point(263, 23);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(200, 138);
             this.panel3.TabIndex = 1;
@@ -130,7 +130,7 @@
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.panel5.Controls.Add(this.label6);
             this.panel5.Controls.Add(this.label7);
-            this.panel5.Location = new System.Drawing.Point(504, 23);
+            this.panel5.Location = new System.Drawing.Point(495, 23);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(200, 138);
             this.panel5.TabIndex = 2;
@@ -160,7 +160,7 @@
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(12, 23);
+            this.panel2.Location = new System.Drawing.Point(32, 23);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(200, 138);
             this.panel2.TabIndex = 0;
@@ -192,7 +192,7 @@
             this.panel6.Controls.Add(this.dataGridView1);
             this.panel6.Location = new System.Drawing.Point(15, 220);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(937, 630);
+            this.panel6.Size = new System.Drawing.Size(935, 630);
             this.panel6.TabIndex = 4;
             // 
             // label1
@@ -214,7 +214,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(904, 544);
+            this.dataGridView1.Size = new System.Drawing.Size(901, 544);
             this.dataGridView1.TabIndex = 5;
             // 
             // Admin_Dashboard
@@ -225,7 +225,7 @@
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel1);
             this.Name = "Admin_Dashboard";
-            this.Size = new System.Drawing.Size(967, 866);
+            this.Size = new System.Drawing.Size(965, 866);
             this.Load += new System.EventHandler(this.Admin_Dashboard_Load);
             this.panel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
+
 namespace Inventory_Management_Sys
 {
     public partial class Main_Form : Form
@@ -20,10 +21,10 @@ namespace Inventory_Management_Sys
 
         private void Close_Click(object sender, EventArgs e)
         {
-            if(MessageBox.Show("Are you sure you want to exit?", "Exit Confirmation",
+            if (MessageBox.Show("Are you sure you want to exit?", "Exit Confirmation",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-               Application.Exit();
+                Application.Exit();
             }
         }
 
