@@ -1,0 +1,7 @@
+﻿CREATE TABLE Categories 
+(
+	Id INT PRIMARY KEY IDENTITY(1,1),
+	Category VARCHAR(50) NOT NULL,
+	Date DATE NOT NULL 
+)
+SELECT * FROM Categories
