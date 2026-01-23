@@ -43,10 +43,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.admin_Add_Categories1 = new Inventory_Management_Sys.User_Control_Forms.Admin_Add_Categories();
-            this.admin_Add_Categories2 = new Inventory_Management_Sys.User_Control_Forms.Admin_Add_Categories();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -58,7 +56,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1317, 50);
+            this.panel1.Size = new System.Drawing.Size(1594, 47);
             this.panel1.TabIndex = 0;
             // 
             // label1
@@ -67,7 +65,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Lime;
-            this.label1.Location = new System.Drawing.Point(31, 16);
+            this.label1.Location = new System.Drawing.Point(299, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(226, 23);
             this.label1.TabIndex = 2;
@@ -81,7 +79,7 @@
             this.Close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Close.Font = new System.Drawing.Font("Times New Roman", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Close.ForeColor = System.Drawing.Color.White;
-            this.Close.Location = new System.Drawing.Point(1238, 8);
+            this.Close.Location = new System.Drawing.Point(1515, 9);
             this.Close.Name = "Close";
             this.Close.Size = new System.Drawing.Size(67, 31);
             this.Close.TabIndex = 1;
@@ -103,9 +101,9 @@
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 50);
+            this.panel2.Location = new System.Drawing.Point(0, 47);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(307, 895);
+            this.panel2.Size = new System.Drawing.Size(303, 879);
             this.panel2.TabIndex = 1;
             // 
             // Logout_Btn
@@ -233,11 +231,10 @@
             // 
             this.flowLayoutPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("flowLayoutPanel1.BackgroundImage")));
             this.flowLayoutPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.flowLayoutPanel1.Controls.Add(this.admin_Add_Categories2);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(307, 50);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(303, 47);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1010, 895);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1291, 879);
             this.flowLayoutPanel1.TabIndex = 2;
             // 
             // admin_Add_Categories1
@@ -249,20 +246,11 @@
             this.admin_Add_Categories1.Size = new System.Drawing.Size(1007, 892);
             this.admin_Add_Categories1.TabIndex = 0;
             // 
-            // admin_Add_Categories2
-            // 
-            this.admin_Add_Categories2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("admin_Add_Categories2.BackgroundImage")));
-            this.admin_Add_Categories2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.admin_Add_Categories2.Location = new System.Drawing.Point(3, 3);
-            this.admin_Add_Categories2.Name = "admin_Add_Categories2";
-            this.admin_Add_Categories2.Size = new System.Drawing.Size(1007, 892);
-            this.admin_Add_Categories2.TabIndex = 0;
-            // 
             // Main_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1317, 945);
+            this.ClientSize = new System.Drawing.Size(1594, 926);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -274,7 +262,6 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -294,8 +281,6 @@
         private System.Windows.Forms.Button Logout_Btn;
         private System.Windows.Forms.Button Close;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private User_Control_Forms.Admin_Add_Users admin_Add_Users1;
         private User_Control_Forms.Admin_Add_Categories admin_Add_Categories1;
-        private User_Control_Forms.Admin_Add_Categories admin_Add_Categories2;
     }
 }

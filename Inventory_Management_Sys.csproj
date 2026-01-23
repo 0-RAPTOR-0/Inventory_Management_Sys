@@ -63,6 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class_Files\Categories_Data.cs" />
+    <Compile Include="Class_Files\Products_Data.cs" />
     <Compile Include="Class_Files\Users_Data.cs" />
     <Compile Include="Login_From.cs">
       <SubType>Form</SubType>
@@ -89,6 +90,12 @@
     </Compile>
     <Compile Include="User_Control_Forms\Admin_Add_Categories.Designer.cs">
       <DependentUpon>Admin_Add_Categories.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User_Control_Forms\Admin_Add_Products.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User_Control_Forms\Admin_Add_Products.Designer.cs">
+      <DependentUpon>Admin_Add_Products.cs</DependentUpon>
     </Compile>
     <Compile Include="User_Control_Forms\Admin_Add_Users.cs">
       <SubType>UserControl</SubType>
@@ -124,6 +131,9 @@
     <EmbeddedResource Include="User_Control_Forms\Admin_Add_Categories.resx">
       <DependentUpon>Admin_Add_Categories.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="User_Control_Forms\Admin_Add_Products.resx">
+      <DependentUpon>Admin_Add_Products.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="User_Control_Forms\Admin_Add_Users.resx">
       <DependentUpon>Admin_Add_Users.cs</DependentUpon>
     </EmbeddedResource>
@@ -156,16 +166,16 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="SQL File\" />
+    <Folder Include="Product_Images\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitattributes" />
     <Content Include=".gitignore" />
-    <Content Include="Images\pexels-byrahul-695644.jpg" />
-    <Content Include="Images\pexels-luis-ruiz-991422.jpg" />
-    <Content Include="Images\wallpaperflare.com_wallpaper %281%29.jpg" />
-    <Content Include="Images\wallpaperflare.com_wallpaper %286%29.jpg" />
-    <Content Include="Images\wallpaperflare.com_wallpaper.jpg" />
+    <Content Include="From_Images\pexels-byrahul-695644.jpg" />
+    <Content Include="From_Images\pexels-luis-ruiz-991422.jpg" />
+    <Content Include="From_Images\wallpaperflare.com_wallpaper %281%29.jpg" />
+    <Content Include="From_Images\wallpaperflare.com_wallpaper %286%29.jpg" />
+    <Content Include="From_Images\wallpaperflare.com_wallpaper.jpg" />
     <Content Include="I_M_S_Database\I_M_S_DB.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -173,6 +183,12 @@
       <DependentUpon>I_M_S_DB.mdf</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="SQL File\Category_SQLQuery1.sql" />
+    <Content Include="SQL File\Products_SQLQuery1.sql" />
+    <Content Include="SQL File\USER_SQLQuery2.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

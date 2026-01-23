@@ -50,7 +50,7 @@
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.Add_Category_Data_Grid_V);
             this.panel2.Controls.Add(this.label5);
-            this.panel2.Location = new System.Drawing.Point(383, 24);
+            this.panel2.Location = new System.Drawing.Point(538, 53);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(590, 760);
             this.panel2.TabIndex = 5;
@@ -121,6 +121,7 @@
             this.Add_Category_Remove_Btn.TabIndex = 12;
             this.Add_Category_Remove_Btn.Text = "Remove";
             this.Add_Category_Remove_Btn.UseVisualStyleBackColor = false;
+            this.Add_Category_Remove_Btn.Click += new System.EventHandler(this.Add_Category_Remove_Btn_Click);
             // 
             // Add_Category_Update_Btn
             // 
@@ -182,7 +183,7 @@
             this.panel1.Controls.Add(this.Add_Category_Add_Btn);
             this.panel1.Controls.Add(this.Add_Categories_category);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(4, 82);
+            this.panel1.Location = new System.Drawing.Point(159, 111);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(373, 697);
             this.panel1.TabIndex = 4;
@@ -196,7 +197,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "Admin_Add_Categories";
-            this.Size = new System.Drawing.Size(977, 809);
+            this.Size = new System.Drawing.Size(1288, 879);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Add_Category_Data_Grid_V)).EndInit();

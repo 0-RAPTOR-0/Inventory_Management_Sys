@@ -61,9 +61,9 @@
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Location = new System.Drawing.Point(15, 17);
+            this.panel1.Location = new System.Drawing.Point(159, 25);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(935, 184);
+            this.panel1.Size = new System.Drawing.Size(962, 184);
             this.panel1.TabIndex = 0;
             // 
             // panel4
@@ -191,9 +191,9 @@
             this.panel6.BackColor = System.Drawing.Color.Transparent;
             this.panel6.Controls.Add(this.label1);
             this.panel6.Controls.Add(this.dataGridView1);
-            this.panel6.Location = new System.Drawing.Point(15, 220);
+            this.panel6.Location = new System.Drawing.Point(159, 228);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(935, 630);
+            this.panel6.Size = new System.Drawing.Size(962, 630);
             this.panel6.TabIndex = 4;
             // 
             // label1
@@ -215,7 +215,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(901, 544);
+            this.dataGridView1.Size = new System.Drawing.Size(927, 544);
             this.dataGridView1.TabIndex = 5;
             // 
             // Admin_Dashboard
@@ -228,7 +228,7 @@
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel1);
             this.Name = "Admin_Dashboard";
-            this.Size = new System.Drawing.Size(968, 858);
+            this.Size = new System.Drawing.Size(1288, 879);
             this.Load += new System.EventHandler(this.Admin_Dashboard_Load);
             this.panel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);

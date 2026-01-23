@@ -1,0 +1,14 @@
+﻿CREATE TABLE Products
+(
+	Id INT PRIMARY KEY IDENTITY(1,1),
+	Product_ID VARCHAR(50) NOT NULL,
+	Product_Name VARCHAR(50) NOT NULL,
+	Category VARCHAR(50) NOT NULL,
+	Price FLOAT NOT NULL,
+	Stock INT NOT NULL,
+	Status VARCHAR(50) NOT NULL,
+	Image_Path VARCHAR (50) NOT NULL,
+	Date_Insert DATE NOT NULL,
+)
+
+SELECT * FROM Products

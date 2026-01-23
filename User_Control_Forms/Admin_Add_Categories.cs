@@ -151,17 +151,64 @@ namespace Inventory_Management_Sys.User_Control_Forms
 
                             string updateData = "UPDATE Categories SET Category = @Category WHERE Id = @Id";
 
-                            using (SqlCommand insertD = new SqlCommand(updateData, connect))
+                            using (SqlCommand updateD = new SqlCommand(updateData, connect))
                             {
-                                insertD.Parameters.AddWithValue("@Category", Add_Categories_category.Text.Trim());
-                                insertD.Parameters.AddWithValue("@Id", getId);
+                                updateD.Parameters.AddWithValue("@Category", Add_Categories_category.Text.Trim());
+                                updateD.Parameters.AddWithValue("@Id", getId);
 
-                                insertD.ExecuteNonQuery();
+                                updateD.ExecuteNonQuery();
                                 clearFields();
 
                                 displayCategories_Data();
 
                                 MessageBox.Show("Updated Successfully", "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            }
+
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Connection failed" + ex, "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        finally
+                        {
+                            connect.Close();
+                        }
+
+                    }
+                }
+            }
+        }
+
+        private void Add_Category_Remove_Btn_Click(object sender, EventArgs e)
+        {
+            if (Add_Categories_category.Text == "")
+            {
+                MessageBox.Show("Empty fields", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            else
+            {
+                if (MessageBox.Show("Are you sure you want to Remove Category: " + getId + "?", "Confirmation Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    if (checkConnection())
+                    {
+                        try
+                        {
+                            connect.Open();
+
+                            string removeData = "DELETE FROM Categories WHERE Id = @Id";
+
+                            using (SqlCommand removeD = new SqlCommand(removeData, connect))
+                            {
+                                removeD.Parameters.AddWithValue("@Id", getId);
+
+                                removeD.ExecuteNonQuery();
+                                clearFields();
+
+                                displayCategories_Data();
+
+                                MessageBox.Show("Removed Successfully", "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                             }
 
