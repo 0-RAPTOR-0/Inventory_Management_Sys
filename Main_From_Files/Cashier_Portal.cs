@@ -20,9 +20,10 @@ namespace Inventory_Management_Sys.Main_From_Files
 
         private void Logout_Btn_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Are you sure you want to logout?", "Logout Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Are you sure you want to logout?", "Logout Confirmation",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                Cashier_Portal cmForm = new Cashier_Portal();
+                Login_From cmForm = new Login_From();
                 cmForm.Show();
                 this.Hide();
 

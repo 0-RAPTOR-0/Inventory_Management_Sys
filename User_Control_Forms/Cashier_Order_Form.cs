@@ -1,18 +1,13 @@
-﻿using System;
+﻿using Inventory_Management_Sys.Class_Files;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Data.SqlClient;
-using System.Runtime.Remoting.Contexts;
+using System.Windows.Forms;
 
 namespace Inventory_Management_Sys.User_Control_Forms
 {
-    public partial class Cashier_Order_Form: UserControl
+    public partial class Cashier_Order_Form : UserControl
     {
         SqlConnection connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\wasib\source\repos\Inventory_Management_Sys\I_M_S_Database\I_M_S_DB.mdf;Integrated Security=True");
 
@@ -20,20 +15,20 @@ namespace Inventory_Management_Sys.User_Control_Forms
         {
             InitializeComponent();
 
-            displayAllAvailableProducts 
-                ();
-           
+            displayallAvailableProducts();
+            displayAll_Categories();
+
         }
 
-        public void displayAllAvailableProducts()
+        public void displayallAvailableProducts()
         {
-            AddProductsData apData = new AddProductsData();
-            List<AddProductsData> listData = apData.AllAvailableProducts();
+            Products_Data Pro_D = new Products_Data();
+            List<Products_Data> listData = Pro_D.allAvailableProducts();
 
-            DataGridView1.DataSource = listData;    
+            DataGridView1.DataSource = listData;
         }
 
-        public bool checkconnection()
+        public bool checkConnection()
         {
             if (connect.State == ConnectionState.Closed)
             {
@@ -45,17 +40,19 @@ namespace Inventory_Management_Sys.User_Control_Forms
             }
         }
 
-        public bool displayCategories()
+        public void displayAll_Categories()
         {
-            if (checkconnection())
+            if (!checkConnection())
             {
+
+
                 try
                 {
                     connect.Open();
 
-                    string seletctData = "SELECT * FROM Categories ";
+                    string seletcData = "SELECT * FROM Categories ";
 
-                    using (SqlCommand cmd = new SqlCommand(seletctData, connect))
+                    using (SqlCommand cmd = new SqlCommand(seletcData, connect))
                     {
                         using (SqlDataReader reader = cmd.ExecuteReader())
                         {
@@ -88,9 +85,7 @@ namespace Inventory_Management_Sys.User_Control_Forms
             cashierOrder_prodID.Items.Clear();
             cashierOrder_prodName.Text = "";
             cashierOrder_price.Text = "";
-
-
-
+            cashierOrder_qty.Value = 0;
 
 
             string selectedValue = cashierOrder_Catagroy.SelectedItem as string;
@@ -102,18 +97,17 @@ namespace Inventory_Management_Sys.User_Control_Forms
                     try
                     {
                         connect.Open();
-                        string seletctData = $"SELECT * FROM prod_id = '{selectedValue}' AND Status = @status ";
+                        string seletctData = $"SELECT * FROM Products WHERE Category = '{selectedValue}' AND Status = @Status ";
 
-                        using (SqlCommand cmd = new SqlCommand(selectData, (SqlConnection)connect))
+                        using (SqlCommand cmd = new SqlCommand(seletctData, connect))
                         {
                             cmd.Parameters.AddWithValue("@status", "Available");
                             using (SqlDataReader reader = cmd.ExecuteReader())
                             {
-                                cashierOrder_Products.Items.Clear();
                                 while (reader.Read())
                                 {
-                                    string item = reader["prod_id"].ToString();
-                                    cashierOrder_prodID.Items.Add(item);
+                                    string value = reader["Product_ID"].ToString();
+                                    cashierOrder_prodID.Items.Add(value);
                                 }
                             }
                         }
@@ -144,38 +138,45 @@ namespace Inventory_Management_Sys.User_Control_Forms
             if (checkConnection())
                 if (selectedValue != null)
                 {
+
+                    try
                     {
-                        try
+                        connect.Open();
+                        string selectData = $"SELECT * FROM products WHERE Product_ID = '{selectedValue}' AND status = @status";
+                        using (SqlCommand cmd = new SqlCommand(selectData, connect))
                         {
-                            connect.Open();
-                            string selectData = $"SELECT * FROM products WHERE prod_id = '{selectedValue}' AND status = @status";
-                            using (SqlCommand cmd = new SqlCommand(selectData, connect))
+                            cmd.Parameters.AddWithValue("@status", "Available");
+                            using (SqlDataReader reader = cmd.ExecuteReader())
                             {
-                                cmd.Parameters.AddWithValue("@status", "Available");
-                                using (SqlDataReader reader = cmd.ExecuteReader())
+                                while (reader.Read())
                                 {
-                                    while (reader.Read())
-                                    {
-                                        string prodName = reader["prod_name"].ToString(); float prodPrice = Convert.ToSingle(reader["price"]);
-                                        cashierOrder_prodName.Text = prodName;
-                                        cashierOrder_price.Text = prodPrice.ToString("0.00");
-                                    }
+                                    string prodName = reader["Product_Name"].ToString(); 
+                                    float prodPrice = Convert.ToSingle(reader["Price"]);
+
+                                    cashierOrder_prodName.Text = prodName;
+                                    cashierOrder_price.Text = prodPrice.ToString("0.00");
                                 }
-
                             }
-                        }
 
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show("Failed connection: " + ex, "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-
-                        finally
-                        {
-                            connect.Close();
                         }
                     }
+
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Failed connection: " + ex, "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
+                    finally
+                    {
+                        connect.Close();
+                    }
+
                 }
+        }
+
+        private void cashierOrder_addBtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

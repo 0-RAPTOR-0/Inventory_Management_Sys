@@ -84,7 +84,7 @@ namespace Inventory_Management_Sys
                                     insertD.Parameters.AddWithValue("@User", Register_Username.Text.Trim());
                                     insertD.Parameters.AddWithValue("@Pass", Register_Password.Text.Trim());
                                     insertD.Parameters.AddWithValue("@Role", "Cashier");
-                                    insertD.Parameters.AddWithValue("@Status", "Approval");
+                                    insertD.Parameters.AddWithValue("@Status", "Active");
 
                                     DateTime today = DateTime.Today;
                                     insertD.Parameters.AddWithValue("@Date", today);

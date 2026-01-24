@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Security.Cryptography.X509Certificates;
 
 
 namespace Inventory_Management_Sys.Class_Files
@@ -52,12 +51,49 @@ namespace Inventory_Management_Sys.Class_Files
 
                     }
                     return listData;
-                
-            
-        
-      
-                public List<Products_Data> allAvailableProducts()
-            
+                }
+
+
+            }
+        }
+
+
+        public List<Products_Data> allAvailableProducts()
+        {
+            List<Products_Data> productList = new List<Products_Data>();
+
+            using (SqlConnection
+            connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\wasib\source\repos\Inventory_Management_Sys\I_M_S_Database\I_M_S_DB.mdf;Integrated Security=True"))
+            {
+                connect.Open();
+
+                string selectData = "SELECT * FROM Products WHERE status = @status";
+
+                using (SqlCommand cmd = new SqlCommand(selectData, connect))
+                {
+                    cmd.Parameters.AddWithValue("@status", "Available");
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        Products_Data Pro_D = new Products_Data();
+
+                        Pro_D.Id = (int)reader["Id"];
+                        Pro_D.Product_ID = reader["Product_ID"].ToString();
+                        Pro_D.Product_Name = reader["Product_Name"].ToString();
+                        Pro_D.Category = reader["Category"].ToString();
+                        Pro_D.Price = reader["Price"].ToString();
+                        Pro_D.Stock = reader["Stock"].ToString();
+                        Pro_D.Status = reader["Status"].ToString();
+                        Pro_D.Date_Insert = reader["Date_Insert"].ToString();
+                        Pro_D.Image_Path = reader["Image_Path"].ToString();
+
+                        productList.Add(Pro_D);
+
+                    }
+                    return productList;
+                }
+
             }
         }
     }

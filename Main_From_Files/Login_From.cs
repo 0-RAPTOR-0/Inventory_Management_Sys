@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using Inventory_Management_Sys.Main_From_Files;
+using System;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Runtime.Remoting.Contexts;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace Inventory_Management_Sys
 {
@@ -35,7 +29,7 @@ namespace Inventory_Management_Sys
 
         private void Login_ShowPass_CheckedChanged(object sender, EventArgs e)
         {
-            Login_Password.PasswordChar = Login_ShowPass.Checked ? '\0' : '*' ;
+            Login_Password.PasswordChar = Login_ShowPass.Checked ? '\0' : '*';
         }
 
         public bool CheckConnection()
@@ -58,25 +52,45 @@ namespace Inventory_Management_Sys
                 try
                 {
                     connect.Open();
-                    string selectData = "SELECT * FROM Users WHERE UserName = @User AND Password = @Pass";
+                    string selectData = "SELECT COUNT (*) FROM Users WHERE UserName = @User AND Password = @Pass  AND Status = Status";
 
                     using (SqlCommand cmd = new SqlCommand(selectData, connect))
                     {
                         cmd.Parameters.AddWithValue("@User", Login_Username.Text.Trim());
                         cmd.Parameters.AddWithValue("@Pass", Login_Password.Text.Trim());
+                        cmd.Parameters.AddWithValue("@Status", "Active");
 
-                        SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                        DataTable table = new DataTable();
-                        adapter.Fill(table);
+                        int rowCount = (int)cmd.ExecuteScalar();
 
-                        if (table.Rows.Count > 0)
+                        if (rowCount > 0)
                         {
-                            MessageBox.Show("Login Successful", "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            string selectRole = "SELECT Role FROM Users WHERE UserName = @User AND Password = @Pass";
+                            using (SqlCommand getRole = new SqlCommand(selectRole, connect))
+                            {
+                                getRole.Parameters.AddWithValue("@User", Login_Username.Text.Trim());
+                                getRole.Parameters.AddWithValue("@Pass", Login_Password.Text.Trim());
 
-                            Admin_Portal M_from = new Admin_Portal ();
-                            M_from.Show();
+                                string userRole = getRole.ExecuteScalar() as string;
 
-                            this.Hide();
+                                MessageBox.Show("Login Successful", "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+                                if (userRole == "Admin")
+                                {
+                                    Admin_Portal M_from = new Admin_Portal();
+                                    M_from.Show();
+
+                                    this.Hide();
+                                }
+                                else if (userRole == "Cashier")
+                                {
+                                    Cashier_Portal CM_from = new Cashier_Portal();
+                                    CM_from.Show();
+                                    this.Hide();
+                                }
+
+
+                            }
 
                         }
                         else
@@ -93,7 +107,7 @@ namespace Inventory_Management_Sys
                 }
                 finally
                 {
-                  connect.Close();
+                    connect.Close();
                 }
             }
         }

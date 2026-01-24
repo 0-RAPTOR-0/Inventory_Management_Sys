@@ -203,6 +203,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <None Include="Resources\istockphoto-1458066679-612x612.jpg" />
+    <Content Include="SQL File\Cashier_Category_SQLQuery3.sql" />
     <Content Include="SQL File\Category_SQLQuery1.sql" />
     <Content Include="SQL File\Customer_Order_SQLQuery1.sql" />
     <Content Include="SQL File\Products_SQLQuery1.sql" />
