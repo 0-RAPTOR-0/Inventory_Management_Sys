@@ -41,10 +41,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.Close = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.cashier_Customers_Form1 = new Inventory_Management_Sys.User_Control_Forms.Cashier_Customers_Form();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -79,6 +77,7 @@
             this.Logout_Btn.TabIndex = 8;
             this.Logout_Btn.Text = "LogOut";
             this.Logout_Btn.UseVisualStyleBackColor = false;
+            this.Logout_Btn.Click += new System.EventHandler(this.Logout_Btn_Click);
             // 
             // Customers_Btn
             // 
@@ -209,19 +208,11 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Transparent;
-            this.panel3.Controls.Add(this.cashier_Customers_Form1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(331, 59);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1261, 867);
             this.panel3.TabIndex = 5;
-            // 
-            // cashier_Customers_Form1
-            // 
-            this.cashier_Customers_Form1.Location = new System.Drawing.Point(6, 104);
-            this.cashier_Customers_Form1.Name = "cashier_Customers_Form1";
-            this.cashier_Customers_Form1.Size = new System.Drawing.Size(1162, 726);
-            this.cashier_Customers_Form1.TabIndex = 6;
             // 
             // Cashier_Portal
             // 
@@ -241,7 +232,6 @@
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -259,6 +249,5 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button Close;
         private System.Windows.Forms.Panel panel3;
-        private User_Control_Forms.Cashier_Customers_Form cashier_Customers_Form1;
     }
 }
