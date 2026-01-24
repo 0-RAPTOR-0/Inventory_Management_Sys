@@ -29,32 +29,21 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cashier_Portal));
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.Logout_Btn = new System.Windows.Forms.Button();
             this.Customers_Btn = new System.Windows.Forms.Button();
             this.Addproduct_Btn = new System.Windows.Forms.Button();
-            this.Addcategories_Btn = new System.Windows.Forms.Button();
-            this.Addusers_Btn = new System.Windows.Forms.Button();
+            this.Order_Btn = new System.Windows.Forms.Button();
             this.Dashboard_Btn = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.Close = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.flowLayoutPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(331, 59);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1260, 867);
-            this.flowLayoutPanel1.TabIndex = 5;
             // 
             // panel2
             // 
@@ -63,8 +52,7 @@
             this.panel2.Controls.Add(this.Logout_Btn);
             this.panel2.Controls.Add(this.Customers_Btn);
             this.panel2.Controls.Add(this.Addproduct_Btn);
-            this.panel2.Controls.Add(this.Addcategories_Btn);
-            this.panel2.Controls.Add(this.Addusers_Btn);
+            this.panel2.Controls.Add(this.Order_Btn);
             this.panel2.Controls.Add(this.Dashboard_Btn);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
@@ -99,7 +87,7 @@
             this.Customers_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Customers_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Customers_Btn.ForeColor = System.Drawing.Color.MediumSpringGreen;
-            this.Customers_Btn.Location = new System.Drawing.Point(50, 491);
+            this.Customers_Btn.Location = new System.Drawing.Point(50, 364);
             this.Customers_Btn.Name = "Customers_Btn";
             this.Customers_Btn.Size = new System.Drawing.Size(231, 49);
             this.Customers_Btn.TabIndex = 7;
@@ -115,44 +103,28 @@
             this.Addproduct_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Addproduct_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Addproduct_Btn.ForeColor = System.Drawing.Color.MediumSpringGreen;
-            this.Addproduct_Btn.Location = new System.Drawing.Point(50, 420);
+            this.Addproduct_Btn.Location = new System.Drawing.Point(50, 281);
             this.Addproduct_Btn.Name = "Addproduct_Btn";
             this.Addproduct_Btn.Size = new System.Drawing.Size(231, 49);
             this.Addproduct_Btn.TabIndex = 6;
             this.Addproduct_Btn.Text = "Add Products";
             this.Addproduct_Btn.UseVisualStyleBackColor = false;
             // 
-            // Addcategories_Btn
+            // Order_Btn
             // 
-            this.Addcategories_Btn.BackColor = System.Drawing.Color.Transparent;
-            this.Addcategories_Btn.FlatAppearance.BorderSize = 0;
-            this.Addcategories_Btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.Addcategories_Btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.Addcategories_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Addcategories_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Addcategories_Btn.ForeColor = System.Drawing.Color.MediumSpringGreen;
-            this.Addcategories_Btn.Location = new System.Drawing.Point(50, 348);
-            this.Addcategories_Btn.Name = "Addcategories_Btn";
-            this.Addcategories_Btn.Size = new System.Drawing.Size(231, 49);
-            this.Addcategories_Btn.TabIndex = 5;
-            this.Addcategories_Btn.Text = "Add Categories";
-            this.Addcategories_Btn.UseVisualStyleBackColor = false;
-            // 
-            // Addusers_Btn
-            // 
-            this.Addusers_Btn.BackColor = System.Drawing.Color.Transparent;
-            this.Addusers_Btn.FlatAppearance.BorderSize = 0;
-            this.Addusers_Btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.Addusers_Btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.Addusers_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Addusers_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Addusers_Btn.ForeColor = System.Drawing.Color.MediumSpringGreen;
-            this.Addusers_Btn.Location = new System.Drawing.Point(50, 275);
-            this.Addusers_Btn.Name = "Addusers_Btn";
-            this.Addusers_Btn.Size = new System.Drawing.Size(231, 49);
-            this.Addusers_Btn.TabIndex = 4;
-            this.Addusers_Btn.Text = "Add Users";
-            this.Addusers_Btn.UseVisualStyleBackColor = false;
+            this.Order_Btn.BackColor = System.Drawing.Color.Transparent;
+            this.Order_Btn.FlatAppearance.BorderSize = 0;
+            this.Order_Btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.Order_Btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.Order_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Order_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Order_Btn.ForeColor = System.Drawing.Color.MediumSpringGreen;
+            this.Order_Btn.Location = new System.Drawing.Point(50, 445);
+            this.Order_Btn.Name = "Order_Btn";
+            this.Order_Btn.Size = new System.Drawing.Size(231, 49);
+            this.Order_Btn.TabIndex = 4;
+            this.Order_Btn.Text = "Order";
+            this.Order_Btn.UseVisualStyleBackColor = false;
             // 
             // Dashboard_Btn
             // 
@@ -202,7 +174,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1591, 59);
+            this.panel1.Size = new System.Drawing.Size(1592, 59);
             this.panel1.TabIndex = 3;
             // 
             // label1
@@ -232,14 +204,23 @@
             this.Close.Text = "X";
             this.Close.UseVisualStyleBackColor = false;
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Transparent;
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(331, 59);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1261, 867);
+            this.panel3.TabIndex = 5;
+            // 
             // Cashier_Portal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1591, 926);
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.ClientSize = new System.Drawing.Size(1592, 926);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -255,19 +236,17 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button Logout_Btn;
         private System.Windows.Forms.Button Customers_Btn;
         private System.Windows.Forms.Button Addproduct_Btn;
-        private System.Windows.Forms.Button Addcategories_Btn;
-        private System.Windows.Forms.Button Addusers_Btn;
+        private System.Windows.Forms.Button Order_Btn;
         private System.Windows.Forms.Button Dashboard_Btn;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button Close;
+        private System.Windows.Forms.Panel panel3;
     }
 }
