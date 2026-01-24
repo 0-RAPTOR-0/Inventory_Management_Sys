@@ -59,5 +59,15 @@ namespace Inventory_Management_Sys.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap istockphoto_1458066679_612x612 {
+            get {
+                object obj = ResourceManager.GetObject("istockphoto-1458066679-612x612", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

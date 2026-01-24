@@ -115,6 +115,13 @@
     <Compile Include="User_Control_Forms\Admin_Dashboard.Designer.cs">
       <DependentUpon>Admin_Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="User_Control_Forms\Cashier_Order_Form.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User_Control_Forms\Cashier_Order_Form.Designer.cs">
+      <DependentUpon>Cashier_Order_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User_Control_Forms\exception.cs" />
     <EmbeddedResource Include="Main_From_Files\Cashier_Portal.resx">
       <DependentUpon>Cashier_Portal.cs</DependentUpon>
     </EmbeddedResource>
@@ -148,6 +155,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="User_Control_Forms\Admin_Dashboard.resx">
       <DependentUpon>Admin_Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_Control_Forms\Cashier_Order_Form.resx">
+      <DependentUpon>Cashier_Order_Form.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -192,6 +202,7 @@
       <DependentUpon>I_M_S_DB.mdf</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\istockphoto-1458066679-612x612.jpg" />
     <Content Include="SQL File\Category_SQLQuery1.sql" />
     <Content Include="SQL File\Products_SQLQuery1.sql" />
     <Content Include="SQL File\USER_SQLQuery2.sql" />
