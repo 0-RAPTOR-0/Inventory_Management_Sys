@@ -56,9 +56,9 @@
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.Add_User_Data_Grid_V);
             this.panel2.Controls.Add(this.label5);
-            this.panel2.Location = new System.Drawing.Point(448, 47);
+            this.panel2.Location = new System.Drawing.Point(378, 40);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(769, 760);
+            this.panel2.Size = new System.Drawing.Size(810, 760);
             this.panel2.TabIndex = 3;
             // 
             // Add_User_Data_Grid_V
@@ -82,7 +82,7 @@
             this.Add_User_Data_Grid_V.RowHeadersVisible = false;
             this.Add_User_Data_Grid_V.RowHeadersWidth = 51;
             this.Add_User_Data_Grid_V.RowTemplate.Height = 24;
-            this.Add_User_Data_Grid_V.Size = new System.Drawing.Size(760, 697);
+            this.Add_User_Data_Grid_V.Size = new System.Drawing.Size(804, 697);
             this.Add_User_Data_Grid_V.TabIndex = 15;
             this.Add_User_Data_Grid_V.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Add_User_Data_Grid_V_CellClick);
             // 
@@ -167,8 +167,7 @@
             this.Adduser_Status.FormattingEnabled = true;
             this.Adduser_Status.Items.AddRange(new object[] {
             "Active",
-            "Inactive",
-            "Approval"});
+            "Inactive"});
             this.Adduser_Status.Location = new System.Drawing.Point(31, 352);
             this.Adduser_Status.Name = "Adduser_Status";
             this.Adduser_Status.Size = new System.Drawing.Size(270, 33);
@@ -261,9 +260,9 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.Adduser_Username);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(69, 105);
+            this.panel1.Location = new System.Drawing.Point(40, 98);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(373, 697);
+            this.panel1.Size = new System.Drawing.Size(332, 697);
             this.panel1.TabIndex = 2;
             // 
             // Admin_Add_Users
@@ -275,7 +274,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "Admin_Add_Users";
-            this.Size = new System.Drawing.Size(1287, 879);
+            this.Size = new System.Drawing.Size(1212, 830);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Add_User_Data_Grid_V)).EndInit();
