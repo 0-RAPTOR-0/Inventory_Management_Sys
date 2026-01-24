@@ -40,7 +40,7 @@
             this.cashierOrder_addBtn = new System.Windows.Forms.Button();
             this.cashierOrder_qty = new System.Windows.Forms.NumericUpDown();
             this.cashierOrder_prodID = new System.Windows.Forms.ComboBox();
-            this.cashierOrder_Catagroy = new System.Windows.Forms.ComboBox();
+            this.cashierOrder_Categroy = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.cashierOrder_receipt = new System.Windows.Forms.Button();
             this.cashierOrder_amount = new System.Windows.Forms.TextBox();
@@ -168,7 +168,7 @@
             this.cashierOrder_addBtn.TabIndex = 10;
             this.cashierOrder_addBtn.Text = "ADD";
             this.cashierOrder_addBtn.UseVisualStyleBackColor = false;
-            this.cashierOrder_addBtn.Click += new System.EventHandler(this.cashierOrder_addBtn_Click);
+            this.cashierOrder_addBtn.Click += new System.EventHandler(this.cashierOrder_addBtn_Click_1);
             // 
             // cashierOrder_qty
             // 
@@ -186,14 +186,14 @@
             this.cashierOrder_prodID.TabIndex = 8;
             this.cashierOrder_prodID.SelectedIndexChanged += new System.EventHandler(this.cashierOrder_prodID_SelectedIndexChanged);
             // 
-            // cashierOrder_Catagroy
+            // cashierOrder_Categroy
             // 
-            this.cashierOrder_Catagroy.FormattingEnabled = true;
-            this.cashierOrder_Catagroy.Location = new System.Drawing.Point(134, 50);
-            this.cashierOrder_Catagroy.Name = "cashierOrder_Catagroy";
-            this.cashierOrder_Catagroy.Size = new System.Drawing.Size(121, 24);
-            this.cashierOrder_Catagroy.TabIndex = 7;
-            this.cashierOrder_Catagroy.SelectedIndexChanged += new System.EventHandler(this.cashierOrder_Catagroy_SelectedIndexChanged);
+            this.cashierOrder_Categroy.FormattingEnabled = true;
+            this.cashierOrder_Categroy.Location = new System.Drawing.Point(134, 50);
+            this.cashierOrder_Categroy.Name = "cashierOrder_Categroy";
+            this.cashierOrder_Categroy.Size = new System.Drawing.Size(121, 24);
+            this.cashierOrder_Categroy.TabIndex = 7;
+            this.cashierOrder_Categroy.SelectedIndexChanged += new System.EventHandler(this.cashierOrder_Catagroy_SelectedIndexChanged);
             // 
             // label6
             // 
@@ -314,7 +314,7 @@
             this.panel2.Controls.Add(this.cashierOrder_addBtn);
             this.panel2.Controls.Add(this.cashierOrder_qty);
             this.panel2.Controls.Add(this.cashierOrder_prodID);
-            this.panel2.Controls.Add(this.cashierOrder_Catagroy);
+            this.panel2.Controls.Add(this.cashierOrder_Categroy);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label4);
@@ -344,6 +344,7 @@
             this.DataGridView1.RowTemplate.Height = 24;
             this.DataGridView1.Size = new System.Drawing.Size(583, 236);
             this.DataGridView1.TabIndex = 0;
+            this.DataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
             // 
             // panel3
             // 
@@ -410,7 +411,7 @@
         private System.Windows.Forms.Button cashierOrder_addBtn;
         private System.Windows.Forms.NumericUpDown cashierOrder_qty;
         private System.Windows.Forms.ComboBox cashierOrder_prodID;
-        private System.Windows.Forms.ComboBox cashierOrder_Catagroy;
+        private System.Windows.Forms.ComboBox cashierOrder_Categroy;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button cashierOrder_receipt;
         private System.Windows.Forms.TextBox cashierOrder_amount;

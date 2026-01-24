@@ -41,8 +41,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.Close = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.cashier_Order_Form1 = new Inventory_Management_Sys.User_Control_Forms.Cashier_Order_Form();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -208,11 +210,21 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Transparent;
+            this.panel3.Controls.Add(this.cashier_Order_Form1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(331, 59);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1261, 867);
             this.panel3.TabIndex = 5;
+
+            // 
+            // cashier_Order_Form1
+            // 
+            this.cashier_Order_Form1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cashier_Order_Form1.BackgroundImage")));
+            this.cashier_Order_Form1.Location = new System.Drawing.Point(6, 53);
+            this.cashier_Order_Form1.Name = "cashier_Order_Form1";
+            this.cashier_Order_Form1.Size = new System.Drawing.Size(1107, 746);
+            this.cashier_Order_Form1.TabIndex = 0;
             // 
             // Cashier_Portal
             // 
@@ -232,6 +244,7 @@
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -249,5 +262,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button Close;
         private System.Windows.Forms.Panel panel3;
+        private User_Control_Forms.Cashier_Order_Form cashier_Order_Form1;
     }
 }
