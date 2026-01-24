@@ -36,6 +36,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.Add_Pro_Data_Grid_V = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.Add_Product_Update_Btn = new System.Windows.Forms.Button();
             this.Add_Product_Remove_Btn = new System.Windows.Forms.Button();
             this.Add_Product_Import_Btn = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -54,7 +55,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.Add_Product_ID = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.Add_Product_Update_Btn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Add_Pro_Data_Grid_V)).BeginInit();
             this.panel3.SuspendLayout();
@@ -139,6 +139,22 @@
             this.panel3.Size = new System.Drawing.Size(1215, 323);
             this.panel3.TabIndex = 2;
             // 
+            // Add_Product_Update_Btn
+            // 
+            this.Add_Product_Update_Btn.BackColor = System.Drawing.Color.Transparent;
+            this.Add_Product_Update_Btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.Add_Product_Update_Btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.Add_Product_Update_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Add_Product_Update_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Add_Product_Update_Btn.ForeColor = System.Drawing.Color.White;
+            this.Add_Product_Update_Btn.Location = new System.Drawing.Point(191, 226);
+            this.Add_Product_Update_Btn.Name = "Add_Product_Update_Btn";
+            this.Add_Product_Update_Btn.Size = new System.Drawing.Size(107, 55);
+            this.Add_Product_Update_Btn.TabIndex = 22;
+            this.Add_Product_Update_Btn.Text = "Update";
+            this.Add_Product_Update_Btn.UseVisualStyleBackColor = false;
+            this.Add_Product_Update_Btn.Click += new System.EventHandler(this.Add_Product_Update_Btn_Click);
+            // 
             // Add_Product_Remove_Btn
             // 
             this.Add_Product_Remove_Btn.BackColor = System.Drawing.Color.Transparent;
@@ -174,7 +190,9 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel2.Controls.Add(this.Add_Product_Image_V);
+            this.panel2.ForeColor = System.Drawing.Color.White;
             this.panel2.Location = new System.Drawing.Point(901, 16);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(266, 268);
@@ -345,22 +363,6 @@
             this.label2.Size = new System.Drawing.Size(104, 22);
             this.label2.TabIndex = 2;
             this.label2.Text = "Product ID :";
-            // 
-            // Add_Product_Update_Btn
-            // 
-            this.Add_Product_Update_Btn.BackColor = System.Drawing.Color.Transparent;
-            this.Add_Product_Update_Btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.Add_Product_Update_Btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
-            this.Add_Product_Update_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Add_Product_Update_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Add_Product_Update_Btn.ForeColor = System.Drawing.Color.White;
-            this.Add_Product_Update_Btn.Location = new System.Drawing.Point(191, 226);
-            this.Add_Product_Update_Btn.Name = "Add_Product_Update_Btn";
-            this.Add_Product_Update_Btn.Size = new System.Drawing.Size(107, 55);
-            this.Add_Product_Update_Btn.TabIndex = 22;
-            this.Add_Product_Update_Btn.Text = "Update";
-            this.Add_Product_Update_Btn.UseVisualStyleBackColor = false;
-            this.Add_Product_Update_Btn.Click += new System.EventHandler(this.Add_Product_Update_Btn_Click);
             // 
             // Admin_Add_Products
             // 

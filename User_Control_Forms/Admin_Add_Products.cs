@@ -7,6 +7,7 @@ using System.IO;
 using System.Windows.Forms;
 using Inventory_Management_Sys.Class_Files;
 
+
 namespace Inventory_Management_Sys.User_Control_Forms
 {
     public partial class Admin_Add_Products : UserControl
@@ -105,15 +106,15 @@ namespace Inventory_Management_Sys.User_Control_Forms
 
                                 string relativePath = Path.Combine("Product_Images", Add_Product_ID.Text.Trim() + ".jpg");
 
-                                string fullPath = Path.Combine(baseDirectory, relativePath);
-                                string directoryPath = Path.GetDirectoryName(fullPath);
+                                string path = Path.Combine(baseDirectory, relativePath);
+                                string directoryPath = Path.GetDirectoryName(path);
 
                                 if (!Directory.Exists(directoryPath))
                                 {
                                     Directory.CreateDirectory(directoryPath);
                                 }
 
-                                File.Copy(Add_Product_Image_V.ImageLocation, fullPath, true);
+                                File.Copy(Add_Product_Image_V.ImageLocation, path, true);
 
                                 string insertData = "INSERT INTO Products" + "(Product_ID, Product_Name, Category, Price, Stock, Status, Image_Path, Date_Insert)" +
                                     "VALUES (@Pro_ID, @Pro_Name, @Pro_Category, @Pro_Price, @Pro_Stock, @Pro_Status, @Pro_Image_Path, @Pro_Date_Insert)";
@@ -126,7 +127,7 @@ namespace Inventory_Management_Sys.User_Control_Forms
                                     insertD.Parameters.AddWithValue("@Pro_Price", Add_Product_Price.Text.Trim());
                                     insertD.Parameters.AddWithValue("@Pro_Stock", Add_Product_Stock.Text.Trim());
                                     insertD.Parameters.AddWithValue("@Pro_Status", Add_Product_Status.SelectedItem);
-                                    insertD.Parameters.AddWithValue("@Pro_Image_Path", fullPath);
+                                    insertD.Parameters.AddWithValue("@Pro_Image_Path", path);
 
                                     DateTime today = DateTime.Today;
 
@@ -300,7 +301,7 @@ namespace Inventory_Management_Sys.User_Control_Forms
 
                             string baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
                             string relativePath = Path.Combine("Product_Images", Add_Product_ID.Text.Trim() + ".jpg");
-                            string fullPath = Path.Combine(baseDirectory, relativePath);
+                            string path = Path.Combine(baseDirectory, relativePath);
 
                             if (Add_Product_Image_V.ImageLocation != null)
                             {
@@ -313,13 +314,14 @@ namespace Inventory_Management_Sys.User_Control_Forms
                                 GC.Collect();
                                 GC.WaitForPendingFinalizers();
 
-                                string directoryPath = Path.GetDirectoryName(fullPath);
+                                string directoryPath = Path.GetDirectoryName(path);
+
                                 if (!Directory.Exists(directoryPath))
                                 {
                                     Directory.CreateDirectory(directoryPath);
                                 }
 
-                                File.Copy(Add_Product_Image_V.ImageLocation, fullPath, true);
+                                File.Copy(Add_Product_Image_V.ImageLocation, path, true);
                             }
 
                             string updateData = "UPDATE Products SET Product_ID = @Pro_ID, Product_Name = @Pro_Name, " +
@@ -335,7 +337,7 @@ namespace Inventory_Management_Sys.User_Control_Forms
                                 updateD.Parameters.AddWithValue("@Pro_Price", Add_Product_Price.Text.Trim());
                                 updateD.Parameters.AddWithValue("@Pro_Stock", Add_Product_Stock.Text.Trim());
                                 updateD.Parameters.AddWithValue("@Pro_Status", Add_Product_Status.SelectedItem);
-                                updateD.Parameters.AddWithValue("@Pro_Image_Path", fullPath);
+                                updateD.Parameters.AddWithValue("@Pro_Image_Path", path);
                                 updateD.Parameters.AddWithValue("@Pro_Date", DateTime.Today);
                                 updateD.Parameters.AddWithValue("@Id", getId);
 
