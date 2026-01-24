@@ -115,6 +115,12 @@
     <Compile Include="User_Control_Forms\Admin_Dashboard.Designer.cs">
       <DependentUpon>Admin_Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="User_Control_Forms\Cashier_Customers_Form.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User_Control_Forms\Cashier_Customers_Form.Designer.cs">
+      <DependentUpon>Cashier_Customers_Form.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Main_From_Files\Cashier_Portal.resx">
       <DependentUpon>Cashier_Portal.cs</DependentUpon>
     </EmbeddedResource>
@@ -148,6 +154,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="User_Control_Forms\Admin_Dashboard.resx">
       <DependentUpon>Admin_Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_Control_Forms\Cashier_Customers_Form.resx">
+      <DependentUpon>Cashier_Customers_Form.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
