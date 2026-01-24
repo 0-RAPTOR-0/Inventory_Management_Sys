@@ -141,6 +141,8 @@ namespace Inventory_Management_Sys
         private void Register_Form_Load(object sender, EventArgs e)
         {
 
+
+
         }
     }
 }
