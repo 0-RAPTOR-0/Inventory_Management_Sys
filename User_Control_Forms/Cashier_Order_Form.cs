@@ -1,4 +1,5 @@
-﻿using Inventory_Management_Sys.Class_Files;
+﻿using Cashier;
+using Inventory_Management_Sys.Class_Files;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -17,15 +18,40 @@ namespace Inventory_Management_Sys.User_Control_Forms
 
             displayAll_Products();
             displayAll_Categories();
+            displayAllOrders();
 
+            calculateTotal();
         }
 
+        public void calculateTotal()
+        {
+            double total = 0;
+
+            foreach (DataGridViewRow row in dataGridView2.Rows)
+            {
+
+                if (row.Cells["TotalPrice"].Value != null)
+                {
+                    total += Convert.ToDouble(row.Cells["TotalPrice"].Value);
+                }
+            }
+
+
+            cashierOrder_totalprice.Text = total.ToString("0.00");
+        }
         public void displayAll_Products()
         {
             Products_Data Pro_D = new Products_Data();
             List<Products_Data> listData = Pro_D.All_Products();
 
             DataGridView1.DataSource = listData;
+        }
+        public void displayAllOrders()
+        {
+            OrdersData O_Data = new OrdersData();
+            List<OrdersData> listData = O_Data.allOrdersData();
+
+            dataGridView2.DataSource = listData;
         }
 
         public bool checkConnection()
@@ -80,7 +106,7 @@ namespace Inventory_Management_Sys.User_Control_Forms
 
         private void cashierOrder_Catagroy_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // Clear the Product ID list first so it doesn't keep old items
+
             cashierOrder_prodID.Items.Clear();
             cashierOrder_prodName.Text = "";
             cashierOrder_price.Text = "";
@@ -97,7 +123,7 @@ namespace Inventory_Management_Sys.User_Control_Forms
                         connect.Open();
                     }
 
-                    // This query finds IDs based on the category you just picked
+
                     string selectData = "SELECT Product_ID FROM Products WHERE Category = @Category AND Status = @Status";
 
                     using (SqlCommand cmd = new SqlCommand(selectData, connect))
@@ -109,7 +135,7 @@ namespace Inventory_Management_Sys.User_Control_Forms
                         {
                             while (reader.Read())
                             {
-                                // This line adds the IDs to your ComboBox
+
                                 cashierOrder_prodID.Items.Add(reader["Product_ID"].ToString());
                             }
                         }
@@ -129,14 +155,16 @@ namespace Inventory_Management_Sys.User_Control_Forms
 
 
         private int idGen;
+        private object cashierOrder_totalPrice;
+
         public void IDGenerator()
         {
-            // Fix: The original code had a semicolon at the end of the 'using' line which was a bug
+
             using (SqlConnection connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\wasib\source\repos\Inventory_Management_Sys\I_M_S_Database\I_M_S_DB.mdf;Integrated Security=True"))
             {
                 connect.Open();
 
-                // Fix: Added "FROM Orders" to the query
+
                 string selectData = "SELECT MAX(customer_id) FROM Orders";
 
                 using (SqlCommand cmd = new SqlCommand(selectData, connect))
@@ -155,7 +183,7 @@ namespace Inventory_Management_Sys.User_Control_Forms
                 }
             }
 
-            }
+        }
 
         private void cashierOrder_addBtn_Click_1(object sender, EventArgs e)
         {
@@ -188,7 +216,7 @@ namespace Inventory_Management_Sys.User_Control_Forms
                         }
                     }
 
-                    // Fixed the INSERT statement column/parameter match
+
                     string insertdata = @"INSERT INTO Orders 
                 (customer_id, prod_id, prod_name, category, qty, orig_price, total_price, order_date) 
                 VALUES 
@@ -208,6 +236,7 @@ namespace Inventory_Management_Sys.User_Control_Forms
                         cmd.Parameters.AddWithValue("@date", DateTime.Today);
 
                         cmd.ExecuteNonQuery();
+                        displayAllOrders();
                         MessageBox.Show("Item added successfully!", "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
@@ -220,6 +249,8 @@ namespace Inventory_Management_Sys.User_Control_Forms
                     connect.Close();
                 }
             }
+            displayAllOrders();
+
         }
 
         private void cashierOrder_prodID_SelectedIndexChanged(object sender, EventArgs e)
@@ -263,9 +294,159 @@ namespace Inventory_Management_Sys.User_Control_Forms
             }
         }
 
-        private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        public void ClearFields()
         {
+            cashierOrder_Categroy.SelectedIndex = -1;
+            cashierOrder_prodID.SelectedIndex = -1;
+            cashierOrder_prodID.Items.Clear();
+            cashierOrder_prodName.Text = "";
+            cashierOrder_price.Text = "";
+            cashierOrder_qty.Value = 0;
+        }
 
+        private void cashierOrder_clearBtn_Click(object sender, EventArgs e)
+        {
+            ClearFields();
+        }
+
+        private void cashierOrder_removeBtn_Click(object sender, EventArgs e)
+        {
+            {
+                if (dataGridView2.SelectedRows.Count > 0)
+                {
+                    string prodID = dataGridView2.SelectedRows[0].Cells["PID"].Value.ToString();
+                    string customerID = dataGridView2.SelectedRows[0].Cells["CID"].Value.ToString();
+
+                    if (MessageBox.Show("Are you sure you want to remove Product ID: " + prodID + "?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        try
+                        {
+                            if (connect.State == ConnectionState.Closed) { connect.Open(); }
+
+                            string deleteData = "DELETE FROM Orders WHERE prod_id = @prodID AND customer_id = @cID";
+
+                            using (SqlCommand cmd = new SqlCommand(deleteData, connect))
+                            {
+                                cmd.Parameters.AddWithValue("@prodID", prodID);
+                                cmd.Parameters.AddWithValue("@cID", customerID);
+
+                                cmd.ExecuteNonQuery();
+                                MessageBox.Show("Removed successfully!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+
+                            displayAllOrders();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error: " + ex.Message, "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        finally
+                        {
+                            connect.Close();
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Please select a row in the All Orders table first.", "Selection Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+        }
+
+        private void cashierOrder_amount_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(cashierOrder_amount.Text))
+            {
+                cashierOrder_change.Text = "0.00";
+                return;
+            }
+
+            try
+            {
+                double total = 0;
+                double amount = 0;
+
+
+                if (double.TryParse(cashierOrder_totalprice.Text, out total))
+                {
+                    if (double.TryParse(cashierOrder_amount.Text, out amount))
+                    {
+                        double change = amount - total;
+
+                        cashierOrder_change.Text = (change >= 0) ? change.ToString("0.00") : "0.00";
+                    }
+                }
+            }
+            catch
+            {
+                cashierOrder_change.Text = "0.00";
+            }
+        }
+
+        private void cashierOrder_payOrders_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(cashierOrder_amount.Text) || dataGridView2.Rows.Count == 0)
+            {
+                MessageBox.Show("Please add items and enter an amount first.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            try
+            {
+                double total = Convert.ToDouble(cashierOrder_totalprice.Text);
+                double amount = Convert.ToDouble(cashierOrder_amount.Text);
+
+                if (amount < total)
+                {
+                    MessageBox.Show("Insufficient amount provided.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    if (MessageBox.Show("Confirm payment?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        MessageBox.Show("Payment Successful!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        cashierOrder_amount.Text = "";
+                        cashierOrder_change.Text = "0.00";
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void cashierOrder_receipt_Click(object sender, EventArgs e)
+        {
+            if (dataGridView2.Rows.Count == 0 || string.IsNullOrEmpty(cashierOrder_amount.Text))
+            {
+                MessageBox.Show("No transaction found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            string receipt = "------------------------------------------\n";
+            receipt += "          SUPERMARKET RECEIPT             \n";
+            receipt += "------------------------------------------\n";
+            receipt += "Date: " + DateTime.Now.ToString() + "\n\n";
+            receipt += string.Format("{0,-15} {1,-10} {2,-10}\n", "Item", "Qty", "Price");
+
+            foreach (DataGridViewRow row in dataGridView2.Rows)
+            {
+                if (row.Cells["PName"].Value != null)
+                {
+                    receipt += string.Format("{0,-15} {1,-10} {2,-10}\n",
+                        row.Cells["PName"].Value, row.Cells["QTY"].Value, row.Cells["TotalPrice"].Value);
+                }
+            }
+
+            receipt += "------------------------------------------\n";
+            receipt += "TOTAL:   $" + cashierOrder_totalprice.Text + "\n";
+            receipt += "PAID:    $" + cashierOrder_amount.Text + "\n";
+            receipt += "CHANGE:  $" + cashierOrder_change.Text + "\n";
+            receipt += "------------------------------------------\n";
+
+            MessageBox.Show(receipt, "Transaction Receipt", MessageBoxButtons.OK, MessageBoxIcon.None);
         }
     }
 }

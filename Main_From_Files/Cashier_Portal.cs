@@ -30,5 +30,18 @@ namespace Inventory_Management_Sys.Main_From_Files
             }
         }
 
-   }
+        private void Close_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you sure you want to exit?", "Exit Confirmation",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void cashier_Order_Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+    }
 }

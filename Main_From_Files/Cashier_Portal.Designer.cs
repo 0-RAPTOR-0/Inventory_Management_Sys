@@ -206,6 +206,7 @@
             this.Close.TabIndex = 1;
             this.Close.Text = "X";
             this.Close.UseVisualStyleBackColor = false;
+            this.Close.Click += new System.EventHandler(this.Close_Click);
             // 
             // panel3
             // 
@@ -216,15 +217,15 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1261, 867);
             this.panel3.TabIndex = 5;
-
             // 
             // cashier_Order_Form1
             // 
             this.cashier_Order_Form1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cashier_Order_Form1.BackgroundImage")));
-            this.cashier_Order_Form1.Location = new System.Drawing.Point(6, 53);
+            this.cashier_Order_Form1.Location = new System.Drawing.Point(0, 6);
             this.cashier_Order_Form1.Name = "cashier_Order_Form1";
-            this.cashier_Order_Form1.Size = new System.Drawing.Size(1107, 746);
+            this.cashier_Order_Form1.Size = new System.Drawing.Size(1204, 746);
             this.cashier_Order_Form1.TabIndex = 0;
+            this.cashier_Order_Form1.Load += new System.EventHandler(this.cashier_Order_Form1_Load);
             // 
             // Cashier_Portal
             // 

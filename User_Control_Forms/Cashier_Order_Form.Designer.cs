@@ -79,12 +79,13 @@
             // 
             this.cashierOrder_payOrders.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.cashierOrder_payOrders.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.cashierOrder_payOrders.Location = new System.Drawing.Point(16, 488);
+            this.cashierOrder_payOrders.Location = new System.Drawing.Point(69, 492);
             this.cashierOrder_payOrders.Name = "cashierOrder_payOrders";
             this.cashierOrder_payOrders.Size = new System.Drawing.Size(390, 39);
             this.cashierOrder_payOrders.TabIndex = 13;
             this.cashierOrder_payOrders.Text = "PAY ORDERS";
             this.cashierOrder_payOrders.UseVisualStyleBackColor = false;
+            this.cashierOrder_payOrders.Click += new System.EventHandler(this.cashierOrder_payOrders_Click);
             // 
             // cashierOrder_change
             // 
@@ -146,6 +147,7 @@
             this.cashierOrder_clearBtn.TabIndex = 12;
             this.cashierOrder_clearBtn.Text = "CLEAR";
             this.cashierOrder_clearBtn.UseVisualStyleBackColor = false;
+            this.cashierOrder_clearBtn.Click += new System.EventHandler(this.cashierOrder_clearBtn_Click);
             // 
             // cashierOrder_removeBtn
             // 
@@ -157,6 +159,7 @@
             this.cashierOrder_removeBtn.TabIndex = 11;
             this.cashierOrder_removeBtn.Text = "REMOVE";
             this.cashierOrder_removeBtn.UseVisualStyleBackColor = false;
+            this.cashierOrder_removeBtn.Click += new System.EventHandler(this.cashierOrder_removeBtn_Click);
             // 
             // cashierOrder_addBtn
             // 
@@ -209,12 +212,13 @@
             // 
             this.cashierOrder_receipt.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.cashierOrder_receipt.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.cashierOrder_receipt.Location = new System.Drawing.Point(16, 546);
+            this.cashierOrder_receipt.Location = new System.Drawing.Point(69, 554);
             this.cashierOrder_receipt.Name = "cashierOrder_receipt";
             this.cashierOrder_receipt.Size = new System.Drawing.Size(390, 39);
             this.cashierOrder_receipt.TabIndex = 19;
             this.cashierOrder_receipt.Text = "RECEIPT";
             this.cashierOrder_receipt.UseVisualStyleBackColor = false;
+            this.cashierOrder_receipt.Click += new System.EventHandler(this.cashierOrder_receipt_Click);
             // 
             // cashierOrder_amount
             // 
@@ -222,6 +226,7 @@
             this.cashierOrder_amount.Name = "cashierOrder_amount";
             this.cashierOrder_amount.Size = new System.Drawing.Size(100, 22);
             this.cashierOrder_amount.TabIndex = 16;
+            this.cashierOrder_amount.TextChanged += new System.EventHandler(this.cashierOrder_amount_TextChanged);
             // 
             // cashierOrder_totalprice
             // 
@@ -296,11 +301,11 @@
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(16, 54);
+            this.dataGridView2.Location = new System.Drawing.Point(15, 54);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(390, 236);
+            this.dataGridView2.Size = new System.Drawing.Size(516, 236);
             this.dataGridView2.TabIndex = 1;
             // 
             // panel2
@@ -320,9 +325,9 @@
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(28, 371);
+            this.panel2.Location = new System.Drawing.Point(20, 371);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(619, 318);
+            this.panel2.Size = new System.Drawing.Size(630, 318);
             this.panel2.TabIndex = 4;
             // 
             // label1
@@ -338,13 +343,12 @@
             // DataGridView1
             // 
             this.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataGridView1.Location = new System.Drawing.Point(18, 54);
+            this.DataGridView1.Location = new System.Drawing.Point(3, 54);
             this.DataGridView1.Name = "DataGridView1";
             this.DataGridView1.RowHeadersWidth = 51;
             this.DataGridView1.RowTemplate.Height = 24;
-            this.DataGridView1.Size = new System.Drawing.Size(583, 236);
+            this.DataGridView1.Size = new System.Drawing.Size(618, 236);
             this.DataGridView1.TabIndex = 0;
-            this.DataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
             // 
             // panel3
             // 
@@ -361,7 +365,7 @@
             this.panel3.Controls.Add(this.label8);
             this.panel3.Location = new System.Drawing.Point(653, 57);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(426, 632);
+            this.panel3.Size = new System.Drawing.Size(534, 632);
             this.panel3.TabIndex = 3;
             // 
             // panel1
@@ -369,9 +373,9 @@
             this.panel1.BackColor = System.Drawing.Color.LightGreen;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.DataGridView1);
-            this.panel1.Location = new System.Drawing.Point(28, 57);
+            this.panel1.Location = new System.Drawing.Point(20, 57);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(619, 308);
+            this.panel1.Size = new System.Drawing.Size(630, 308);
             this.panel1.TabIndex = 2;
             // 
             // Cashier_Order_Form
@@ -383,7 +387,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Name = "Cashier_Order_Form";
-            this.Size = new System.Drawing.Size(1107, 746);
+            this.Size = new System.Drawing.Size(1204, 746);
             ((System.ComponentModel.ISupportInitialize)(this.cashierOrder_qty)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.panel2.ResumeLayout(false);
