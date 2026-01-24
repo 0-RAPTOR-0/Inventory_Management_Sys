@@ -14,23 +14,70 @@ namespace Inventory_Management_Sys.User_Control_Forms
 {
     public partial class Cashier_Order_Form: UserControl
     {
-        private object connect;
-        private string selectData;
+        SqlConnection connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\wasib\source\repos\Inventory_Management_Sys\I_M_S_Database\I_M_S_DB.mdf;Integrated Security=True");
 
         public Cashier_Order_Form()
         {
             InitializeComponent();
+
+            displayAllAvailableProducts 
+                ();
+           
+        }
+
+        public void displayAllAvailableProducts()
+        {
+            AddProductsData apData = new AddProductsData();
+            List<AddProductsData> listData = apData.AllAvailableProducts();
+
+            DataGridView1.DataSource = listData;    
         }
 
         public bool checkconnection()
         {
-            if (connect.state == ConnectionState.Closed)
+            if (connect.State == ConnectionState.Closed)
             {
                 return true;
             }
             else
             {
                 return false;
+            }
+        }
+
+        public bool displayCategories()
+        {
+            if (checkconnection())
+            {
+                try
+                {
+                    connect.Open();
+
+                    string seletctData = "SELECT * FROM Categories ";
+
+                    using (SqlCommand cmd = new SqlCommand(seletctData, connect))
+                    {
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            cashierOrder_Catagroy.Items.Clear();
+
+                            while (reader.Read())
+                            {
+                                string item = reader.GetString(1);
+                                cashierOrder_Catagroy.Items.Add(item);
+                            }
+
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("ERROR CONNECTION ! " + ex, "ERROR MESSAGE", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    connect.Close();
+                }
             }
         }
 
@@ -115,7 +162,8 @@ namespace Inventory_Management_Sys.User_Control_Forms
                                     }
                                 }
 
-
+                            }
+                        }
 
                         catch (Exception ex)
                         {
