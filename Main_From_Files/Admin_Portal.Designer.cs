@@ -42,7 +42,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.admin_Add_Categories1 = new Inventory_Management_Sys.User_Control_Forms.Admin_Add_Categories();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -200,6 +199,7 @@
             this.Dashboard_Btn.TabIndex = 2;
             this.Dashboard_Btn.Text = "Dashboard";
             this.Dashboard_Btn.UseVisualStyleBackColor = false;
+            this.Dashboard_Btn.Click += new System.EventHandler(this.Dashboard_Btn_Click);
             // 
             // label3
             // 
@@ -234,16 +234,6 @@
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1269, 874);
             this.flowLayoutPanel1.TabIndex = 2;
-            // 
-            // admin_Add_Categories1
-            // 
-            this.admin_Add_Categories1.BackColor = System.Drawing.Color.Transparent;
-            this.admin_Add_Categories1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("admin_Add_Categories1.BackgroundImage")));
-            this.admin_Add_Categories1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.admin_Add_Categories1.Location = new System.Drawing.Point(3, 3);
-            this.admin_Add_Categories1.Name = "admin_Add_Categories1";
-            this.admin_Add_Categories1.Size = new System.Drawing.Size(1007, 892);
-            this.admin_Add_Categories1.TabIndex = 0;
             // 
             // Admin_Portal
             // 

@@ -32,19 +32,19 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.dashboard_totalincome = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.dashboard_AC = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.dashboard_TI = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.dashboard_AU = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -70,7 +70,7 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.panel4.Controls.Add(this.label8);
-            this.panel4.Controls.Add(this.label9);
+            this.panel4.Controls.Add(this.dashboard_totalincome);
             this.panel4.Location = new System.Drawing.Point(729, 23);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(200, 138);
@@ -86,21 +86,21 @@
             this.label8.TabIndex = 7;
             this.label8.Text = "Total Income";
             // 
-            // label9
+            // dashboard_totalincome
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(31, 29);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(66, 25);
-            this.label9.TabIndex = 6;
-            this.label9.Text = "$ 0.00";
+            this.dashboard_totalincome.AutoSize = true;
+            this.dashboard_totalincome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dashboard_totalincome.Location = new System.Drawing.Point(31, 29);
+            this.dashboard_totalincome.Name = "dashboard_totalincome";
+            this.dashboard_totalincome.Size = new System.Drawing.Size(66, 25);
+            this.dashboard_totalincome.TabIndex = 6;
+            this.dashboard_totalincome.Text = "$ 0.00";
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.panel3.Controls.Add(this.label4);
-            this.panel3.Controls.Add(this.label5);
+            this.panel3.Controls.Add(this.dashboard_AC);
             this.panel3.Location = new System.Drawing.Point(263, 23);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(200, 138);
@@ -116,21 +116,21 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "All Coustomers";
             // 
-            // label5
+            // dashboard_AC
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(34, 29);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(23, 25);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "0";
+            this.dashboard_AC.AutoSize = true;
+            this.dashboard_AC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dashboard_AC.Location = new System.Drawing.Point(34, 29);
+            this.dashboard_AC.Name = "dashboard_AC";
+            this.dashboard_AC.Size = new System.Drawing.Size(23, 25);
+            this.dashboard_AC.TabIndex = 2;
+            this.dashboard_AC.Text = "0";
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.panel5.Controls.Add(this.label6);
-            this.panel5.Controls.Add(this.label7);
+            this.panel5.Controls.Add(this.dashboard_TI);
             this.panel5.Location = new System.Drawing.Point(495, 23);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(200, 138);
@@ -146,21 +146,21 @@
             this.label6.TabIndex = 5;
             this.label6.Text = "Today\'s Income";
             // 
-            // label7
+            // dashboard_TI
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(35, 29);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(66, 25);
-            this.label7.TabIndex = 4;
-            this.label7.Text = "$ 0.00";
+            this.dashboard_TI.AutoSize = true;
+            this.dashboard_TI.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dashboard_TI.Location = new System.Drawing.Point(35, 29);
+            this.dashboard_TI.Name = "dashboard_TI";
+            this.dashboard_TI.Size = new System.Drawing.Size(66, 25);
+            this.dashboard_TI.TabIndex = 4;
+            this.dashboard_TI.Text = "$ 0.00";
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.dashboard_AU);
             this.panel2.Location = new System.Drawing.Point(32, 23);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(200, 138);
@@ -176,25 +176,35 @@
             this.label3.TabIndex = 1;
             this.label3.Text = "All Users";
             // 
-            // label2
+            // dashboard_AU
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(40, 29);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(23, 25);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "0";
+            this.dashboard_AU.AutoSize = true;
+            this.dashboard_AU.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dashboard_AU.Location = new System.Drawing.Point(40, 29);
+            this.dashboard_AU.Name = "dashboard_AU";
+            this.dashboard_AU.Size = new System.Drawing.Size(23, 25);
+            this.dashboard_AU.TabIndex = 0;
+            this.dashboard_AU.Text = "0";
             // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.Transparent;
-            this.panel6.Controls.Add(this.label1);
             this.panel6.Controls.Add(this.dataGridView1);
+            this.panel6.Controls.Add(this.label1);
             this.panel6.Location = new System.Drawing.Point(159, 228);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(962, 630);
             this.panel6.TabIndex = 4;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(32, 78);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(907, 549);
+            this.dataGridView1.TabIndex = 7;
             // 
             // label1
             // 
@@ -207,17 +217,6 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "All Today\'s Coustomers";
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(16, 71);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(927, 544);
-            this.dataGridView1.TabIndex = 5;
-            // 
             // Admin_Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -229,7 +228,6 @@
             this.Controls.Add(this.panel1);
             this.Name = "Admin_Dashboard";
             this.Size = new System.Drawing.Size(1288, 879);
-            this.Load += new System.EventHandler(this.Admin_Dashboard_Load);
             this.panel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
@@ -254,15 +252,15 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label dashboard_AU;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label dashboard_totalincome;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label dashboard_AC;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label dashboard_TI;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

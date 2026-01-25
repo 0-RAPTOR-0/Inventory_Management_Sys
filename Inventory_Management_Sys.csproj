@@ -63,6 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class_Files\Categories_Data.cs" />
+    <Compile Include="Class_Files\connect.cs" />
     <Compile Include="Class_Files\OrdersData.cs" />
     <Compile Include="Class_Files\Products_Data.cs" />
     <Compile Include="Class_Files\Users_Data.cs" />
@@ -123,6 +124,7 @@
       <DependentUpon>Cashier_Order_Form.cs</DependentUpon>
     </Compile>
     <Compile Include="User_Control_Forms\exception.cs" />
+    <Compile Include="User_Control_Forms\Login_Form.cs" />
     <EmbeddedResource Include="Main_From_Files\Cashier_Portal.resx">
       <DependentUpon>Cashier_Portal.cs</DependentUpon>
     </EmbeddedResource>
